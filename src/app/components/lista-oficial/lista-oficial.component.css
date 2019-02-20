@@ -1,0 +1,20 @@
+
+th {
+    font-weight: negrita;
+}
+
+.title{
+    background: #0080FF;
+    
+    color: white;
+    
+}
+
+.body{
+}
+
+.alt{
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+}
+

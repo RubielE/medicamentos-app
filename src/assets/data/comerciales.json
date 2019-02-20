@@ -1,0 +1,540 @@
+{ "data":
+              [
+                {
+                  "comerciales": "Afinitor",
+                  "genericos": "Everolimus"
+                },
+                {
+                  "comerciales": "Agglad",
+                  "genericos": "Brimonidina"
+                },
+                {
+                  "comerciales": "Akineton",
+                  "genericos": "Biperideno"
+                },
+                {
+                  "comerciales": "Aldactone",
+                  "genericos": "Espironolactona"
+                },
+                {
+                  "comerciales": "Aldomet",
+                  "genericos": "Metildopa"
+                },
+                {
+                  "comerciales": "Allegra",
+                  "genericos": "Fexofenadina"
+                },
+                {
+                  "comerciales": "Amaryl",
+                  "genericos": "Glimepirida"
+                },
+                {
+                  "comerciales": "Amlopres-5",
+                  "genericos": "Amlodipina 5 mg"
+                },
+                {
+                  "comerciales": "Anatensol",
+                  "genericos": "Flufenazina decanoato ampolla, 25mg/ml, 1ml, IM"
+                },
+                {
+                  "comerciales": "Aprovel",
+                  "genericos": "Irbersartán"
+                },
+                {
+                  "comerciales": "Arava",
+                  "genericos": "Leflunomida"
+                },
+                {
+                  "comerciales": "Arcoxia 60,90,120 mg",
+                  "genericos": "Etoricoxib"
+                },
+                {
+                  "comerciales": "Artane",
+                  "genericos": "Trihexifenidilo"
+                },
+                {
+                  "comerciales": "Augmentin",
+                  "genericos": "Amoxicilina + Ácido Clavulánico"
+                },
+                {
+                  "comerciales": "Benadryl",
+                  "genericos": "Difenhidramina"
+                },
+                {
+                  "comerciales": "Bonviva",
+                  "genericos": "Ácido ibandrónico 150mg"
+                },
+                {
+                  "comerciales": "Botox",
+                  "genericos": "Toxina Botulínica"
+                },
+                {
+                  "comerciales": "Calvidin",
+                  "genericos": "Carbonato de calcio"
+                },
+                {
+                  "comerciales": "Canestén",
+                  "genericos": "Clotrimazol"
+                },
+                {
+                  "comerciales": "Casodex",
+                  "genericos": "Bicalutamida"
+                },
+                {
+                  "comerciales": "Clorotrimeton 4 mg",
+                  "genericos": "Clorfeniramina 4 mg"
+                },
+                {
+                  "comerciales": "Cloisone ",
+                  "genericos": "Carbidopa -levodopa250/25 mg"
+                },
+                {
+                  "comerciales": "Coaprovel",
+                  "genericos": "Irbersartán /hidroclorotiazida"
+                },
+                {
+                  "comerciales": "COZAAR ",
+                  "genericos": "Losartan /hidroclorotiazida"
+                },
+                {
+                  "comerciales": "Co-Diovan",
+                  "genericos": "Valsartán+Hidroclorotizida"
+                },
+                {
+                  "comerciales": "Combactrin",
+                  "genericos": "Pirantel y oxantel"
+                },
+                {
+                  "comerciales": "Cordarone",
+                  "genericos": "Amiodarona 200 mg"
+                },
+                {
+                  "comerciales": "Coryol",
+                  "genericos": "Carvedilol 6.25 mg"
+                },
+                {
+                  "comerciales": "Coversil",
+                  "genericos": "Perindopril"
+                },
+                {
+                  "comerciales": "Crestor",
+                  "genericos": "Rosuvastatina"
+                },
+                {
+                  "comerciales": "Daflón 500mg",
+                  "genericos": "Diosmina"
+                },
+                {
+                  "comerciales": "Daivobet",
+                  "genericos": "Calcipotriol con betametasona"
+                },
+                {
+                  "comerciales": "Depakene",
+                  "genericos": "Valproato de Magnesio"
+                },
+                {
+                  "comerciales": "Diazide",
+                  "genericos": "Hidroclorotizida con triantereno"
+                },
+                {
+                  "comerciales": "Dilantin",
+                  "genericos": "Fenitoina sodica"
+                },
+                {
+                  "comerciales": "Diurenstein",
+                  "genericos": "Hidroclorotiazida con Triantereno"
+                },
+                {
+                  "comerciales": "Dogmatil 50 mg,200 mg",
+                  "genericos": "Sulpiride"
+                },
+                {
+                  "comerciales": "Dormonoct",
+                  "genericos": "Loprazolam"
+                },
+                {
+                  "comerciales": "Doxium tabletas",
+                  "genericos": "Dobesilato de Calcio 500 mg"
+                },
+                {
+                  "comerciales": "Duodart",
+                  "genericos": "Dutasteride,tamsulosina "
+                },
+                {
+                  "comerciales": "Effexor",
+                  "genericos": "Venlafaxina"
+                },
+                {
+                  "comerciales": "Embrel",
+                  "genericos": "Etanercept"
+                },
+                {
+                  "comerciales": "Epamín/Dilantín",
+                  "genericos": "Fenitoía"
+                },
+                {
+                  "comerciales": "Epival",
+                  "genericos": "Ácido Valpróico"
+                },
+                {
+                  "comerciales": "Etalpha",
+                  "genericos": "Alfacalcidiol"
+                },
+                {
+                  "comerciales": "Eutirox",
+                  "genericos": "Levotiroxina"
+                },
+                {
+                  "comerciales": "EXELON",
+                  "genericos": "Rivastigmina"
+                },
+                {
+                  "comerciales": "Expansia,Plavix",
+                  "genericos": "Clopidogrel"
+                },
+                {
+                  "comerciales": "Femara",
+                  "genericos": "Letrozole"
+                },
+                {
+                  "comerciales": "Fenolip",
+                  "genericos": "Fenofibrato"
+                },
+                {
+                  "comerciales": "Fincar",
+                  "genericos": "Finasteride"
+                },
+                {
+                  "comerciales": "Flamydol",
+                  "genericos": "Diclofenaco potásico 100 mg"
+                },
+                {
+                  "comerciales": "Fucicort",
+                  "genericos": "Acido fusidico 20 mg ,valerato de betametasona 1 mg"
+                },
+                {
+                  "comerciales": "Fucidin",
+                  "genericos": "fusidato sodico"
+                },
+                {
+                  "comerciales": "Gaap",
+                  "genericos": "Latanoprost 0.005%"
+                },
+                {
+                  "comerciales": "Garamicina",
+                  "genericos": "Gentamicina"
+                },
+                {
+                  "comerciales": "Gastrigel,Maalox",
+                  "genericos": "Hidróxido de aluminio y magnesio"
+                },
+                {
+                  "comerciales": "Gelicart",
+                  "genericos": "peptidos de colágeno bioactivo"
+                },
+                {
+                  "comerciales": "Glisulin",
+                  "genericos": "Metformina 850 mg"
+                },
+                {
+                  "comerciales": "Gravol",
+                  "genericos": "Dimenhihidrinato"
+                },
+                {
+                  "comerciales": "Haldol",
+                  "genericos": "Haloperidol"
+                },
+                {
+                  "comerciales": "HITRIM",
+                  "genericos": "Terazosina"
+                },
+                {
+                  "comerciales": "HUMIRA",
+                  "genericos": "Adalimumab 40mg/0.8ml, solución ,I."
+                },
+                {
+                  "comerciales": "Inderal",
+                  "genericos": "Propranolol"
+                },
+                {
+                  "comerciales": "ISENTRESS",
+                  "genericos": "Ratelgavir 400 mg"
+                },
+                {
+                  "comerciales": "Januvia",
+                  "genericos": "Sitagliptina"
+                },
+                {
+                  "comerciales": "Keppra 100 mg/ml susp.levetiracetam",
+                  "genericos": ""
+                },
+                {
+                  "comerciales": "kayexalate",
+                  "genericos": "Poliestireno de sodio"
+                },
+                {
+                  "comerciales": "Lamictal",
+                  "genericos": "Lamotrigina"
+                },
+                {
+                  "comerciales": "Largactil",
+                  "genericos": "Clorpromacina"
+                },
+                {
+                  "comerciales": "Lasix",
+                  "genericos": "Furosemida"
+                },
+                {
+                  "comerciales": "Librium",
+                  "genericos": "clordiazepóxido"
+                },
+                {
+                  "comerciales": "Lindano",
+                  "genericos": "Hexacloruro de gamabenceno"
+                },
+                {
+                  "comerciales": "Lipitor",
+                  "genericos": "Atorvastatina"
+                },
+                {
+                  "comerciales": "Lisdene",
+                  "genericos": "Lisinopril"
+                },
+                {
+                  "comerciales": "Lorvas",
+                  "genericos": "Indapamida"
+                },
+                {
+                  "comerciales": "Lucrin depot",
+                  "genericos": "Acetato de Leuprolide"
+                },
+                {
+                  "comerciales": "Ludiomil",
+                  "genericos": "Maprotilina"
+                },
+                {
+                  "comerciales": "Lyrica",
+                  "genericos": "Pregabalina"
+                },
+                {
+                  "comerciales": "Mimpara 30 mg",
+                  "genericos": "Cinacalcet"
+                },
+                {
+                  "comerciales": "Metamucil ,Fibralax",
+                  "genericos": "Psyllium"
+                },
+                {
+                  "comerciales": "Minipress",
+                  "genericos": "Prazosin"
+                },
+                {
+                  "comerciales": "Multiflora",
+                  "genericos": "Prebioticos ."
+                },
+                {
+                  "comerciales": "Natrilix",
+                  "genericos": "Indapamida"
+                },
+                {
+                  "comerciales": "Nemactil gotas",
+                  "genericos": "Periciacina"
+                },
+                {
+                  "comerciales": "Nexium",
+                  "genericos": "Esomeprazol"
+                },
+                {
+                  "comerciales": "Neurontin",
+                  "genericos": "Gabapentina"
+                },
+                {
+                  "comerciales": "Norvasc",
+                  "genericos": "Amlodipina"
+                },
+                {
+                  "comerciales": "Novalgina",
+                  "genericos": "Dipirona"
+                },
+                {
+                  "comerciales": "Ogastro",
+                  "genericos": "Lanzoprazol 30 mg"
+                },
+                {
+                  "comerciales": "Perivax",
+                  "genericos": "Pentoxifilina"
+                },
+                {
+                  "comerciales": "Pradaxa 75 mg",
+                  "genericos": "Dabigatran etexilato"
+                },
+                {
+                  "comerciales": "Plaquinol",
+                  "genericos": "Hidroxicloroquina"
+                },
+                {
+                  "comerciales": "Plavix",
+                  "genericos": "Clopidogrel"
+                },
+                {
+                  "comerciales": "Prelone",
+                  "genericos": "Prednisona jbe"
+                },
+                {
+                  "comerciales": "Procolaram",
+                  "genericos": "Ivabradina 5 mg solo cardiologos CHM."
+                },
+                {
+                  "comerciales": "Prolopa",
+                  "genericos": "Carbidopa, benserazida"
+                },
+                {
+                  "comerciales": "Proviron",
+                  "genericos": "Mesterolona"
+                },
+                {
+                  "comerciales": "Prozac",
+                  "genericos": "FLUOXETINA"
+                },
+                {
+                  "comerciales": "Risperdal",
+                  "genericos": "Risperidona"
+                },
+                {
+                  "comerciales": "Isentress",
+                  "genericos": "Ratelgravir 400 mg"
+                },
+                {
+                  "comerciales": "Ritalina",
+                  "genericos": "Metilfenidato"
+                },
+                {
+                  "comerciales": "Rivotril                                         Clonazepam",
+                  "genericos": "Clonazepam"
+                },
+                {
+                  "comerciales": "Rytmonorm",
+                  "genericos": "Propafenona"
+                },
+                {
+                  "comerciales": "Scabisan",
+                  "genericos": "permetrina"
+                },
+                {
+                  "comerciales": "Sertral",
+                  "genericos": "Sertralina"
+                },
+                {
+                  "comerciales": "Seroquel",
+                  "genericos": "quetiapina"
+                },
+                {
+                  "comerciales": "Sinemet",
+                  "genericos": "Carbidopa/levodopa"
+                },
+                {
+                  "comerciales": "Singulair",
+                  "genericos": "Montelukast"
+                },
+                {
+                  "comerciales": "Sinogan",
+                  "genericos": "Levomepromacina"
+                },
+                {
+                  "comerciales": "Spiriva",
+                  "genericos": "Tiotropio"
+                },
+                {
+                  "comerciales": "Somazina ",
+                  "genericos": "citicolina"
+                },
+                {
+                  "comerciales": "Tafil .25 ,0.5",
+                  "genericos": "Alprazolam"
+                },
+                {
+                  "comerciales": "Tasygna",
+                  "genericos": "Nilotinib 200 mg tabletas"
+                },
+                {
+                  "comerciales": "Tapazol",
+                  "genericos": "Tiamazol o metimazol"
+                },
+                {
+                  "comerciales": "Tegretol",
+                  "genericos": "Carbamacepina"
+                },
+                {
+                  "comerciales": "Travatan",
+                  "genericos": "Travaprost 0.004%"
+                },
+                {
+                  "comerciales": "Triacil",
+                  "genericos": "Hidrocloroticida con Triantereno"
+                },
+                {
+                  "comerciales": "Trigentax crema",
+                  "genericos": "Clotrimazol,Neomicina,betametasona "
+                },
+                {
+                  "comerciales": "Triptanol",
+                  "genericos": "amitriptilina"
+                },
+                {
+                  "comerciales": "Trivedon",
+                  "genericos": "Trimetazidina"
+                },
+                {
+                  "comerciales": "Urginal",
+                  "genericos": "Oxibutinina"
+                },
+                {
+                  "comerciales": "Valium",
+                  "genericos": "Diazepam"
+                },
+                {
+                  "comerciales": "Valtrex",
+                  "genericos": "Valaciclovir 500 y 1000 mg"
+                },
+                {
+                  "comerciales": "Vastarel",
+                  "genericos": "TRIMETAZIDINA"
+                },
+                {
+                  "comerciales": "ISOPTIN",
+                  "genericos": "Verapamil 80 mg,120 mg"
+                },
+                {
+                  "comerciales": "Viartril",
+                  "genericos": "Sulfato de Glucosamina"
+                },
+                {
+                  "comerciales": "Vytorin",
+                  "genericos": "Pravastatina"
+                },
+                {
+                  "comerciales": "Waribiron",
+                  "genericos": "Aciclovir tabs"
+                },
+                {
+                  "comerciales": "Xalatan",
+                  "genericos": "Latanoprost 0.05% ó 50 mcg"
+                },
+                {
+                  "comerciales": "XARELTO ",
+                  "genericos": "Ribaroxaban "
+                },
+                {
+                  "comerciales": "Zoladex",
+                  "genericos": "Goserelina, acetato 3.6mg"
+                },
+                {
+                  "comerciales": "Zometa",
+                  "genericos": "Acido Zoledronico"
+                },
+                {
+                  "comerciales": "Zytiga",
+                  "genericos": "Abiraterona 250 mg"
+                }
+              ]
+        }

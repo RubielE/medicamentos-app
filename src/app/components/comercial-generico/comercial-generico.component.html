@@ -1,0 +1,27 @@
+
+<app-navbar></app-navbar>
+<div class="container alt">
+   
+    <table #dataTable class="display table table-dark table-hover" style="width:100%" >
+        <!-- ADD HEADERS -->
+        <tr>
+           <!---->
+                <th class="title"><h4>Nombre comercial</h4></th>
+                <th class="title"><h4>Nombre genérico</h4></th>
+        </tr>
+
+        <!-- BIND ARRAY TO TABLE -->
+    <!--    <tr *ngFor="let comercial of arrComerciales | paginate: {itemsPerPage: 10, currentPage: pageActual}; index as i"> -->
+    <tr *ngFor="let comercial of arrComerciales ">
+            <td class="body">{{comercial.comerciales}}</td>
+            <td class="body">{{comercial.genericos}}</td> 
+        </tr>
+    </table>
+    
+    <!--
+    <div class="container ">
+            <div class="row offset-4">
+                <pagination-controls class="pagination" (pageChange)="pageActual = $event"></pagination-controls>
+            </div>
+        </div>  -->
+</div>

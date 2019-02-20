@@ -1,0 +1,108 @@
+
+
+<!-- cierre de seión-->
+     <span *ngIf="identity">
+        {{identity.name}} {{identity.surname }}
+      </span> 
+      <app-navbar></app-navbar>
+<div class="container-fluid alt">
+  <table #dataTable class=" display table table-dark table-hover " style="width:100%">
+    <thead class="thead-inverse">
+      <tr>
+    <!--    <th >Fecha</th>  -->
+        <th col-2>Medicamento
+          <hr>
+          <h6>n. telefónicos farmacia</h6>
+          <h6>horario</h6>
+        </th>
+        <th class="text-center">CHAAM
+          <hr>
+          <h6>503-6103</h6>
+          <h6>7:00-5:00</h6>
+        </th>
+        <th class="text-center">JJV
+          <hr>
+          <h6>503-9410</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th class="text-center">ADGH
+          <hr>
+          <h6>503-1708</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th class="text-center"> MFV
+          <hr>
+          <h6>503-1517</h6>
+          <h6>7:00-9:00</h6>
+        </th>
+        <th class="text-center">GG
+          <hr>
+          <h6>231-0080</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th class="text-center">MMV
+          <hr>
+          <h6>503-1267</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th class="text-center">PPR
+          <hr>
+          <h6>503-3334</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th class="text-center">CNB
+          <hr>
+          <h6>503-1121</h6>
+          <h6>7:00-7:00</h6>
+        </th>
+        <th 
+            class="text-right">
+            
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data ">
+      <!--<tr *ngFor="let item of data | paginate: {itemsPerPage: 7, currentPage: pageActual}; index as i">-->
+      <!--  <th scope="row">{{item.fecha | date}}</th>  -->
+        <td>{{item.medicamento}}</td>
+        <td>{{item.CHAAM}}</td>
+        <td>{{item.JJV}}</td>
+        <td>{{item.ADGH}}</td>
+        <td>{{item.MFV}}</td>
+        <td>{{item.GG}}</td>
+        <td>{{item.MMV}}</td>
+        <td>{{item.PPR}}</td>
+        <td>{{item.CNB}}</td>
+
+       
+        <td >  <!--*ngIf="identity.role == 'ROLE_ADMIN' "-->
+        
+                <a class="btn btn-primary btn-sm right w" type="button"
+                        
+                        [routerLink]="['/editar-medicamento', item._id]">
+                        Editar
+                </a> &nbsp;
+                <a class="btn btn-danger btn-sm right" type="button"
+                        (click)="eliminarMedicamento(item)">
+                        Borrar
+                </a>
+             
+        </td> 
+      <!--
+      <div class="seguro" *ngIf="confirmado ==medicamento._id">
+          <a (click)="eliminarMedicamento(medicamento._id)" class="btn btn-sm btn-danger">Eliminar</a>
+          <a (click)="onCancelMedicamento()" class="btn btn-sm btn-default">Cancelar</a>
+        </div> -->
+      </tr>    
+
+    </tbody>
+  </table> 
+</div> 
+
+
+<!--
+    <div class="row offset-8">
+        <pagination-controls class="pagination" (pageChange)="pageActual = $event"></pagination-controls>
+    </div>
+  -->

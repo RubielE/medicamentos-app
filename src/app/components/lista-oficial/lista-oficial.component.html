@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid alt">
+     <table #dataTable class=" display table table-dark table-hover " style="width:100%">
+       <!-- ADD HEADERS -->
+        <thead> 
+            <tr>
+                <th class="title text-center"><h4> Listado Oficial de medicamentos C.S.S. </h4></th>          
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ENLACE ARRAY TO TABLE --> 
+       <!--    <tr *ngFor = "let Oficial of arrOficiales | filtro: {medicamento: busqueda} : false | paginate: {itemsPerPage: 8, currentPage: pageActual}; index as i">  --> 
+            <tr *ngFor = "let Oficial of arrOficiales ">
+                <td class="body"> {{ Oficial.oficiales }} </td>       
+            </tr>
+        </tbody>
+     </table>
+        
+    </div>
+<!--
+    <div class="container ">
+        <div class="row offset-7">
+            <pagination-controls class="pagination" (pageChange)="pageActual = $event"></pagination-controls>
+        </div>
+    </div>  -->
+
