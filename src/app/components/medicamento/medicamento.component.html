@@ -18,7 +18,7 @@
       </div>
       <div class="col-2">
         <span 
-              [routerLink]="['/medicamento/nuevo']"
+              [routerLink]="['/medicamento/nuevo', medicamento._id]"
               class="btn btn-primary btn-md">
               Agregar nuevo
         </span>  
@@ -357,7 +357,7 @@
       <div class="col">
         <div class="form-group ">
           <label for="JJV">J.J. Vallarino</label>
-          <select (change)="onCambiar(JJV)" [(ngModel)]="medicamentos.JJV" name="JJV" #JJV="ngModel" class="form-control" id="JJV">
+          <select [(ngModel)]="medicamentos.JJV" name="JJV" #JJV="ngModel" class="form-control" id="JJV">
             <option value="Disponible">Disponible</option>
             <option value="No disponible">No disponible</option>
             <option value="F. cuadro básico">F. cuadro básico</option>

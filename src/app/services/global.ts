@@ -1,3 +1,6 @@
 export var GLOBAL = {
-     url: 'http://10.8.73.235:3200'
+     url: 'https://farmacia01.herokuapp.com'
+     //url = 'mongodb://127.0.0.1:27017/usuario/';
+
+     
 };

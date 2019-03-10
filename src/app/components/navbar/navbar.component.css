@@ -1,6 +1,18 @@
+
+
 .title{
+    background: #0080FF;
     padding: 10px;
     text-align: center;
     color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.w {
+    margin-left: 5px;
+}
+
+.alt{
+    padding: 25px;
     border-radius: 0px 0px 10px 10px;
 }

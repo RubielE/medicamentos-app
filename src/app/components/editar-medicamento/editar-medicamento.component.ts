@@ -7,7 +7,8 @@ import { Router, ActivatedRoute, Params } from "@angular/router";
 @Component({
   selector: 'editar-medicamento',
   templateUrl: './editar-medicamento.component.html',
-  styles: ['./editarMedicamento/editarMedicamento.css']
+  styles: ['./editarMedicamento/editarMedicamento.css'],
+  providers:[MedicamentosService]
 })
 export class EditarMedicamentoComponent implements OnInit {
 
@@ -20,26 +21,26 @@ export class EditarMedicamentoComponent implements OnInit {
 
   constructor(private _medicamentosService: MedicamentosService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private route: ActivatedRoute
   ) {
     this.titleSection = "Editar medicamento";
-    this.medicamentos = new Medicamentos("", new Date(), "", "", "", "", "", "", "", "", "", "", "");
     console.log(this.medicamentos);
   }
 
   ngOnInit() {
+    this.medicamentos = new Medicamentos("", new Date(), "", "", "", "", "", "", "", "", "", "", "");
     this.getMedicamento();
   }
 
   getMedicamento() {
-    this.activatedRoute.params.forEach((params: Params) => {
+    this.route.params.forEach((params: Params) => {
       let id = params['id'];
       this._medicamentosService.getMedicamento(id).subscribe(
-        res => {
-          this.medicamentos = res;
-          if (!this.medicamentos) {
-            this.router.navigate(['/']);
-          }
+        response => {
+          this.medicamentos = response;
+            if (!this.medicamentos) {
+              this.router.navigate(['/']);
+            }
         },
         error => {
           this.errorMessage = <any>error;
@@ -51,49 +52,32 @@ export class EditarMedicamentoComponent implements OnInit {
       );
     });
   }
-  /*
-  public update(){
-    console.log(this.medicamento);
-    this.activatedRoute.params.forEach((params:Params) => {
-      let id = params['id'];
-      this._medicamentosService
-          .actualizarMedicamento(id, this.medicamento).subscribe(
-        response => {
-            if(!response){
-                alert('Error en el servidor');
-            } else{
-                this.medicamento = response;
-                this.router.navigate(['/medicamento', this.medicamento]);
-            }
-        }
-      ); 
-  });
-  }  */
 
 
+/*
   actualizarMedicamento(data) {
     let id = this.medicamentos['_id']
-    /* let medicamentos = {
+     let medicamentos = {
                          fecha: new Date(),
-                         medicamento: this.medicamento.medicamento,
-                         CHAAM: this.medicamento.CHAAM,
-                         JJV: this.medicamento.JJV,
-                         ADGH: this.medicamento.ADGH,
-                         MFV: this.medicamento.MFV,
+                         medicamento: this.medicamentos.medicamento,
+                         CHAAM: this.medicamentos.CHAAM,
+                         JJV: this.medicamentos.JJV,
+                         ADGH: this.medicamentos.ADGH,
+                         MFV: this.medicamentos.MFV,
                          GG: this.medicamento.GG,
                          MMV: this.medicamento.MMV,
                          PPR: this.medicamento.PPR,
                          CNB: this.medicamento.CNB,
                          detalle: this.medicamento.detalle,
                          key: this.medicamento.key$,
-     }*/
+     }
     console.log('evento actualizar')
-    this._medicamentosService.actualizarMedicamento(id, this.medicamentos).subscribe(resultado => {
+    this._medicamentosService.editarMedicamento(id, this.medicamentos).subscribe(resultado => {
       console.log(resultado)
     },
       error => {
         console.log(JSON.stringify(error));
       });
-  }
+  }  */
 
 }

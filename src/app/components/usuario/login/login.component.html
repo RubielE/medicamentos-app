@@ -1,5 +1,6 @@
 <router-outlet></router-outlet>
 <div class="clearfix"></div>
+
 <div *ngIf="identity" class="central col-lg-1 navigation">
 
   <h1 class="head-title">{{title}}</h1>
@@ -25,18 +26,17 @@
   </nav>
   <nav id="user_logged">
       <span id="identity_name">
-        {{identity_name}}
+        {{identity.name}}
       </span>
-      <a (clic)="logut()" class="btn-logout">
-          <span class="glyphicon glyphicon-log-out" aria-hiden="true"></span>
+      <span (clic)="logut()" class="btn-logout">
             Salir
-      </a>
+      </span>
 
   </nav>
-<!--siguiente linea es una prueba-->
+siguiente linea es una prueba
   <p>Has iniciado sesión en la aplicación</p>
   
-</div>
+</div> 
 
 <div class="col-lg-11" *ngIf="!identity">
     <div class="col-lg-6">
@@ -51,27 +51,27 @@
 <div class="container">
   <div class="login-form col-4 offset-4 card card-container">
       <h2 class="title text-center">Identificarse</h2>
-   
+ <!--  
   <div *ngIf="identity" class="central col-11">
     <p>Has iniciado sesión</p>
-  </div>
+  </div> -->
   
-  <form (ngSubmit)="onSubmit()"   #loginForm="ngForm" class="" >
-    
+  <form (ngSubmit)="onLogin()"   #formLogin="ngForm" class="login-container" >
     <div class="form-group row">
-      <div class="container">
-          <label for="user" class="col-4 col-form-label">Usuario</label>
-          <div class="col-10">
-            <input [(ngModel)]="user.usuario" #user="ngModel" name="user" type="text" class="form-control" 
-            id="user" placeholder="Ingrese usuario" required>
-              <span *ngIf="!user.valid && user.touched">El campo es obligatorio</span>
+      <div class="container col-12 ">
+          <label for="email" class="col-4 col-form-label"></label>
+          <div class="col-12">
+            <input  [(ngModel)]="user.email" #email="ngModel" name="email" type="email" class="form-control" 
+            id="email" placeholder="Ingrese su correo" required>
+              <span *ngIf="!email.valid && email.touched">El campo es obligatorio</span>
           </div>
       </div>
       <div class="container">
-          <label for="Password" class="col-4 col-form-label">Contraseña</label>
-          <div class="col-10">
+          <label for="Password" class="col-4 col-form-label"></label>
+          <div class="col-12">
             <input  [(ngModel)]="user.password" #password="ngModel" name="password" type="password" 
                 class="form-control" id="Password" placeholder="Ingrese su contraseña" required>
+                <span *ngIf="!password.valid && password.touched">Contraseña es obligatoria</span>
         </div>
       </div>
     </div>
@@ -93,9 +93,7 @@
     <div class="form-group row">
       <div class=" col-12" >
           <button 
-                  [routerLink]="['/register']"
-                  type="submit" 
-                  
+                  [routerLink]="['/register']" 
                   class="btn btn-success btn-block">Registrarse
           </button>
         </div>

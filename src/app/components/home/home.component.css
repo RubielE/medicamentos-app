@@ -1,11 +1,3 @@
-.login-form{
-    margin-top: 60px;
-    box-shadow: 0px 0px 10px 1px grey;
-    border-radius: 5px;
-    padding-bottom: 10px;
-    background: white;
-}
-
 
 
 .title{
@@ -13,20 +5,36 @@
     padding: 10px;
     text-align: center;
     color: white;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 60px;
+}
+
+.title-body{
+    background: #4A2AFD;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 60px 60px;
 }
 
 .navigation{
     margin:0px;
-    height: 100%;
-    background: #eee;
+    height: 100vh;
+    text-align: center;
+    background: #151515;
 }
 
 .head-title{
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-bottom: 35px;
+    display: block;
+}
+.head-title2{
+    font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     display: block;
 }
 
@@ -54,4 +62,19 @@
     bottom: 0px;
     border-top: 1px solid #444;
     width: 75%;
+}
+
+div {
+    width: 100%;
+}
+.logo{
+    width: 150px; 
+    height: auto;
+    margin: auto;
+    display: block;
+    
+  }
+
+.others {
+    padding: 65px;
 }

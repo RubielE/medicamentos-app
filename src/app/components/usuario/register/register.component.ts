@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../models/authenticate/user';
+import { Usuario } from '../../../models/authenticate/user';
 import { UserService } from '../../../services/user.service';
 
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { NgForm } from '@angular/forms/src/directives/ng_form';
+//import { NgForm } from '@angular/forms/src/directives/ng_form';
 
 @Component({
   selector: 'app-register',
@@ -13,36 +13,47 @@ import { NgForm } from '@angular/forms/src/directives/ng_form';
 })
 export class RegisterComponent implements OnInit {
 
+  
 
-  constructor(private userService: UserService, private router: Router, private location:Location) { }
-  private user: User = {
-    
-        usuario: '',    
-        nombre: '',
-        clave: '',
-        perfil: ''
-  };
+  public title = 'Farma-app';
+  public user: Usuario;
+  public user_register: Usuario;
+  public identity;
+  public token;
 
-  public isError = false;
-  public msgError = '';
+  public errorMessage;
+  public alertRegister;
+
+  constructor(
+    private _userService:UserService
+  ){
+    this.user_register = new Usuario( '', '', '', 'rol', '');
+  }
 
   ngOnInit() {
-  }
-/*
+    this.identity= this._userService.getIdentity();
+    this.token = this._userService.getToken();
+
+    console.log(this.identity);
+    console.log(this.token);
+    
+   }
+  
   onRegister(){
-    console.log(this.users_register);
-    this._userService.register(this.users_register).subscribe(
+    console.log(this.user_register);
+
+    this._userService.register(this.user_register).subscribe(
       response => {
-        let user = response.user;
-        this.users_register= user ;
-          
-          if(!user._id){
-            this.alertRegister ='Error al registrarse';
-          }else{
-            this.alertRegister = 'El registro se ha realizado correctamente, identificate con' +this.users_register.user;
-            this.users_register = new User('', '', '', 'ROLE_USER', '');
-          }
-      },
+            let user = response.user;
+            this.user_register= user;
+              
+              if(!user._id){
+                this.alertRegister ='Error al registrarse';
+              }else{
+                this.alertRegister = 'El registro se ha realizado correctamente.';
+                this.user_register = new Usuario('', '', '', 'rol', '');
+              }
+          },
        error => {
         var errorMessage = <any>error;
          if(errorMessage != null){
@@ -54,6 +65,5 @@ export class RegisterComponent implements OnInit {
     );
 
   }
-*/
-
+  
 }

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs/internal/Observable';
 import { GLOBAL } from './global';
 import { isNullOrUndefined } from 'util';
 
-import { User } from '../models/authenticate/user';
+import { Usuario } from '../models/authenticate/user';
 
 @Injectable()
 export class UserService {
@@ -17,7 +17,7 @@ export class UserService {
     constructor( private _http: HttpClient){
         this.url = GLOBAL.url;
     }
-    singup(user_to_login, gethash = null){
+    login(user_to_login, gethash = null):Observable<any>{
 
         if(gethash != null){
            user_to_login.gethash = gethash; 
@@ -27,7 +27,8 @@ export class UserService {
         let params = json;
 
         let headers = new HttpHeaders({'Content-Type': 'application/json'});
-        return this._http.post(this.url+'login', params, { headers: headers}).pipe(map(res => res));
+        return this._http.post(this.url+'/usuario/auth', params, { headers: headers})
+            .map(res => res);
     }
     //metodo de registro de datos
     register(user_to_register):Observable<any>{
@@ -35,10 +36,11 @@ export class UserService {
         let params = json;
 
         let headers = new HttpHeaders({'Content-Type': 'application/json'});
-        return this._http.post(this.url+'login', params, { headers: headers}).pipe(map(res => res));
+        return this._http.post(this.url+'/usuario/crear', params, { headers: headers})
+            .map(res => res);
     }
     // fin de metodo registro
-    //Metodo para actualizar usuario
+    /*Metodo para actualizar usuario
     update_user(user_to_update){
         let json = JSON.stringify(user_to_update);
         let params = json;
@@ -46,9 +48,9 @@ export class UserService {
         let headers = new HttpHeaders({'Content-Type': 'application/json',
                                         'Authorization': this.getToken()
                                     });
-        return this._http.put(this.url+'update-user/'+user_to_update._id, params, { headers: headers}).pipe(map(res => res));
+        return this._http.put(this.url+'usuario/update-user/'+user_to_update._id, params, { headers: headers}).pipe(map(res => res));
     }
-    //
+    */
 
 
     getIdentity(){

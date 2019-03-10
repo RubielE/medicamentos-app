@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { User } from '../../models/authenticate/user'
+import { UserService } from '../../../services/user.service';
+import { Usuario } from '../../../models/authenticate/user'
 
 @Component({
   selector: 'app-user-edit',
@@ -10,21 +10,20 @@ import { User } from '../../models/authenticate/user'
 }) 
 export class UserEditComponent implements OnInit {
   public titulo: string;
-  public users: User;
+  public users: Usuario;
   public identity;
   public token;
 
   constructor(private _userService: UserService) { 
     this.titulo = 'Actualizar mis datos';
-    this.users = new User( '', '', '', 'ROLE_USER', '');
+   // this.users = new User( '', '', '', 'ROLE_USER', '');
 
     //localStrage
-    this.identity= this._userService.getIdentity();
-    this.token = this._userService.getToken();
+  //  this.identity= this._userService.getIdentity();
+  //  this.token = this._userService.getToken();
   }
 
   ngOnInit() {
-    
     console.log('user-edit.component.ts cargado');
   }
 

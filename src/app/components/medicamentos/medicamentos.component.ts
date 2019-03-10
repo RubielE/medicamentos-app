@@ -17,11 +17,6 @@ export class MedicamentosComponent implements OnInit {
   public identity;
   public token;
 
-  //datatables add
-  @ViewChild('dataTable') table: ElementRef;
-  dataTable:any;
-  dtOption: any;
-
   constructor(
     private router: Router,
 
@@ -29,6 +24,8 @@ export class MedicamentosComponent implements OnInit {
   ) {
     this.medicamento = new Medicamentos("", new Date(), "", "", "", "", "", "", "", "", "", "", "");
   }
+
+  filterItem='';
 
   pageActual: number = 1;
   date = Date;
@@ -63,57 +60,7 @@ eliminarMedicamento(id) {
     ) */
   }
   
-  ngOnInit(): void {
-    this.dtOption = {
-                      "paginType": "",
-                      "ajax": {
-                                url:'http://10.8.73.235:3300/medicamentos/listar',
-                                type: 'GET',
-                                data: {
-                                  'fecha': 'Date', 'medicamento':'', 'CHAAM':'', 'JJV':'', 'ADGH':'', 'MFV':'', 'GG':'', 'MMV':'', 'PPR':'', 'CNB':'' 
-                                }
-                              },
-                      columns: [
-                        {
-                          title: 'Medicamento',
-                          data: 'medicamento'
-                        },
-                        {
-                          title: 'CHAAM',
-                          data: 'CHAAM'
-                        },
-                        {
-                          title: 'JJV',
-                          data: 'JJV'
-                        },
-                        {
-                          title: 'ADGH',
-                          data: 'ADGH'
-                        },
-                        {
-                          title: 'MFV',
-                          data: 'MFV'
-                        },
-                        {
-                          title: 'GG',
-                          data: 'GG'
-                        },
-                        {
-                          title: 'MMV',
-                          data: 'MMV'
-                        },
-                        {
-                          title: 'PPR',
-                          data: 'PPR'
-                        },
-                        {
-                          title: 'CNB',
-                          data: 'CNB'
-                        }
-                      ]
-                    };
-  this.dataTable = $(this.table.nativeElement);
-  this.dataTable.dataTable(this.dtOption);
+  ngOnInit() {
 
 //llamando metodo listar
     this.listar();

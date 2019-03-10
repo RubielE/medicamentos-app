@@ -1,56 +1,83 @@
 
+<!--navbar-->
+<nav class="navbar navbar-toggleable-lg navbar-inverse bg-primary" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand">
+      <img src="assets/img/logoweb.gif" width="65px;" height="45px;" alt="logo">
+    </a> 
+      <button class="display-5 text-center title" [routerLink]="['/home']" ><strong>Inicio</strong></button>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/medicamentos']" ><strong>Lista agotados</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/lista-oficial']"><strong>Listado oficial</strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " [routerLink]="['/comercial-generico']"><strong>Nombre comercial/ genérico</strong></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="filterItem" [(ngModel)]="filterItem">  
+    <!--  <button class="btn btn-outline my-2 my-sm-0" type="submit">Buscar</button> -->
+      <button class="btn btn-outline my-2 my-sm-0" type="button">Salir</button> 
+    </form>
+  </div>
+</nav>
 
-<!-- cierre de seión-->
-     <span *ngIf="identity">
-        {{identity.name}} {{identity.surname }}
-      </span> 
-      <app-navbar></app-navbar>
+
+<!--fin de navbar-->
+
+<!--tabla de fechas de modificación-->
+<!--
 <div class="container-fluid alt">
-  <table #dataTable class=" display table table-dark table-hover " style="width:100%">
+  <table class=" display table table-striped table-hover " style="width:100%">
     <thead class="thead-inverse">
       <tr>
-    <!--    <th >Fecha</th>  -->
-        <th col-2>Medicamento
+        <th col-2>Fecha
           <hr>
-          <h6>n. telefónicos farmacia</h6>
+          <h6>Tel. farmacia</h6>
           <h6>horario</h6>
         </th>
-        <th class="text-center">CHAAM
+        <th class="text-center">CHAAM-fecha
           <hr>
           <h6>503-6103</h6>
           <h6>7:00-5:00</h6>
         </th>
-        <th class="text-center">JJV
+        <th class="text-center">JJV-fecha
           <hr>
           <h6>503-9410</h6>
           <h6>7:00-7:00</h6>
         </th>
-        <th class="text-center">ADGH
+        <th class="text-center">ADGH-fecha
           <hr>
           <h6>503-1708</h6>
           <h6>7:00-7:00</h6>
         </th>
-        <th class="text-center"> MFV
+        <th class="text-center"> MFV-fecha
           <hr>
           <h6>503-1517</h6>
           <h6>7:00-9:00</h6>
         </th>
-        <th class="text-center">GG
+        <th class="text-center">GG-fecha
           <hr>
           <h6>231-0080</h6>
           <h6>7:00-7:00</h6>
         </th>
-        <th class="text-center">MMV
+        <th class="text-center">MMV-fecha
           <hr>
           <h6>503-1267</h6>
           <h6>7:00-7:00</h6>
         </th>
-        <th class="text-center">PPR
+        <th class="text-center">PPR-fecha
           <hr>
           <h6>503-3334</h6>
           <h6>7:00-7:00</h6>
         </th>
-        <th class="text-center">CNB
+        <th class="text-center">CNB-fecha
           <hr>
           <h6>503-1121</h6>
           <h6>7:00-7:00</h6>
@@ -62,8 +89,63 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of data ">
-      <!--<tr *ngFor="let item of data | paginate: {itemsPerPage: 7, currentPage: pageActual}; index as i">-->
+      <tr >
+        <td>{{item.CHAAM_fecha}}</td>
+        <td>{{item.JJV_fecha}}</td>
+        <td>{{item.ADGH_fecha}}</td>
+        <td>{{item.MFV_fecha}}</td>
+        <td>{{item.GG_fecha}}</td>
+        <td>{{item.MMV_fecha}}</td>
+        <td>{{item.PPR_fecha}}</td>
+        <td>{{item.CNB_fecha}}</td> -->
+
+       <!--
+        <td >  *ngIf="identity.role == 'ROLE_ADMIN' "
+        
+                <a class="btn btn-primary btn-sm right w" type="button"
+                        
+                        [routerLink]="['/editar-medicamento', item._id]">
+                        Editar fecha
+                </a>   
+        </td> 
+      </tr>    
+
+    </tbody>
+  </table> 
+</div>  -->
+
+<!--tabla de medicamentos-->
+<div class="container-fluid">
+  <table class=" display table table-striped table-hover " style="width:100%">
+    <thead class="thead-inverse">
+      <tr>
+    <!--    <th >Fecha</th>  -->
+        <th >Medicamento
+        </th>
+        <th class="text-center">CHAAM  
+        </th>
+        <th class="text-center">JJV
+        </th>
+        <th class="text-center">ADGH
+        </th>
+        <th class="text-center"> MFV
+        </th>
+        <th class="text-center">GG
+        </th>
+        <th class="text-center">MMV
+        </th>
+        <th class="text-center">PPR
+        </th>
+        <th class="text-center">CNB
+        </th>
+        <th 
+            class="text-right">Option
+            
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data | filter: filterItem ">
       <!--  <th scope="row">{{item.fecha | date}}</th>  -->
         <td>{{item.medicamento}}</td>
         <td>{{item.CHAAM}}</td>
@@ -73,36 +155,20 @@
         <td>{{item.GG}}</td>
         <td>{{item.MMV}}</td>
         <td>{{item.PPR}}</td>
-        <td>{{item.CNB}}</td>
-
-       
-        <td >  <!--*ngIf="identity.role == 'ROLE_ADMIN' "-->
-        
-                <a class="btn btn-primary btn-sm right w" type="button"
-                        
-                        [routerLink]="['/editar-medicamento', item._id]">
-                        Editar
-                </a> &nbsp;
-                <a class="btn btn-danger btn-sm right" type="button"
-                        (click)="eliminarMedicamento(item)">
-                        Borrar
-                </a>
-             
+        <td>{{item.CNB}}</td> 
+ 
+        <td col-2>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary btn-sm right w"
+                  [routerLink]="['/editar-medicamento', item._id]">
+                  Editar</button>
+                  <button type="button" class="btn btn-danger btn-sm right"
+                  (click)="eliminarMedicamento(item)">
+                    Borrar</button>
+                </div>
         </td> 
-      <!--
-      <div class="seguro" *ngIf="confirmado ==medicamento._id">
-          <a (click)="eliminarMedicamento(medicamento._id)" class="btn btn-sm btn-danger">Eliminar</a>
-          <a (click)="onCancelMedicamento()" class="btn btn-sm btn-default">Cancelar</a>
-        </div> -->
-      </tr>    
-
+      </tr> 
     </tbody>
   </table> 
-</div> 
+</div>
 
-
-<!--
-    <div class="row offset-8">
-        <pagination-controls class="pagination" (pageChange)="pageActual = $event"></pagination-controls>
-    </div>
-  -->

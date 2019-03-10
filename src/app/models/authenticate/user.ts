@@ -1,9 +1,10 @@
-export class User {
-    constructor(
-       public _id?: string,
-       public usuario?: string,
-       public nombre?: string,
-       public clave?: string,
-       public perfil?: string
-    ) { }
+export  class Usuario {
+    constructor (
+    
+        _id: string,
+        name: string,
+        email: string,
+        rol: string,
+        password: string
+    ) {}
  }

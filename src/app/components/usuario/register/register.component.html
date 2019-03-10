@@ -1,68 +1,57 @@
 <!-- formulario de registro-->
+<div class="clearfix"></div>
 
-<div class="container" [hidden]="mostrar">
+<div class="container">
   <div class="register-form title col-8 offset-2 card card-container" >
-      <h2 class=" text-center">Ingresar datos</h2>
-
-      <div *ngIf="alertRegister">
-          <div class="alert alet-info">
-            {{alertRegister}}
-          </div>
-        </div>
+      <h2 class=" text-center">Crear cuenta</h2>
   
-<form (ngSubmit)="onSubmitRegister()"   #registerForm="ngForm" class="" >
+<form (ngSubmit)="onRegister()" #formRegister="ngForm" class="login-container" >
   <div class="form-group row ">
     <div class="container col-6">
-      <label for="user" class="col-4 col-form-label">Nombre</label>
+      <label for="name" class="col-4 col-form-label">Nombre</label>
       <div class="">
-        <input  [(ngModel)]="users_register.nombre"  #user="ngModel" name="nombre" type="text" 
-                class="form-control" id="nombre" placeholder="Ingrese su nombre"  required>
-                <span *ngIf="!user.valid && user.touched">El nombre es obligatorio</span>
+        <input  [(ngModel)]="user_register.name"  #name="ngModel" name="name" type="text" 
+                class="form-control" id="name" value="" placeholder="Ingrese su nombre"  required>
+                <span *ngIf="!name.valid && name.touched">El nombre es obligatorio</span>
       </div>
-    </div>
-    <div class="container col-6">
-        <label for="apellido" class="col-4 col-form-label">Apellido</label>
-        <div class="">
-          <input  [(ngModel)]="users_register.apellido" #apellido="ngModel" name="apellido" type="apellido" 
-                  class="form-control" id="apellido" placeholder="Ingrese su apellido" required>
-                  <span *ngIf="!apellido.valid && apellido.touched">El apellido es obligatorio</span>
-        </div>
     </div>
   </div>
   <div class="form-group row">
     <div class="container col-6">
-          <label for="correo" class="col-4 col-form-label">email</label>
+          <label for="email" class="col-4 col-form-label">email</label>
           <div class="">
-            <input  [(ngModel)]="users_register.correo" #correo="ngModel" name="correo" type="correo" 
-                    class="form-control" id="correo" placeholder="Ingrese su correo" required>
-                    <span *ngIf="!correo.valid && correo.touched">El correo es obligatorio</span>
+            <input  [(ngModel)]="user_register.email" #email="ngModel" name="email" type="email" 
+                    class="form-control" id="email" value="" placeholder="Ingrese su correo" required>
+                    <span *ngIf="!email.valid && email.touched">El correo es obligatorio</span>
           </div>
     </div>
+  </div>
+  <div class="form-group row">
     <div class="container col-6">
-          <label for="clave" class="col-4 col-form-label">Contraseña</label>
+          <label for="password" class="col-4 col-form-label">Contraseña</label>
           <div class="">
-            <input  [(ngModel)]="users_register.clave" #password="ngModel" name="clave" type="clave" 
-                class="form-control" id="clave" placeholder="Ingrese una contraseña" required>
+            <input  [(ngModel)]="user_register.password" #password="ngModel" name="password" type="password" 
+                class="form-control" id="password" value="" placeholder="Ingrese una contraseña" required>
                 <span *ngIf="!password.valid && password.touched">La contraseña es obligatoria</span>
         </div>
     </div>
-    
   </div>
     <div class="form-group row">
         <div class="container col-12">
         <button 
-              type="submit" 
+              type="submit"
+              value="Register" 
               class="btn btn-primary ">Registrarse
         </button> 
       </div>
     </div>
     <div class="form-group row">
       <div class="container col-12">
-      <button 
-            [routerLink]="['login']"
+        <button 
+            [routerLink]="['/login']"
             type="submit" 
             class="btn btn-primary ">Ya tienes una cuenta?
-      </button> 
+        </button> 
     </div>
   </div>
   </form>

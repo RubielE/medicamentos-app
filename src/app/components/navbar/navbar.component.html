@@ -6,7 +6,7 @@
     <a class="navbar-brand">
       <img src="assets/img/logoweb.gif" width="55" height="50" alt="">
     </a>
-      <h4 class="display-5 text-center title"><strong>Medicamentos Farmacia</strong></h4>
+    <button class="display-5 text-center title" [routerLink]="['/home']" ><strong>Inicio</strong></button>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/medicamentos']" ><strong>Lista agotados</strong></a>
@@ -20,9 +20,10 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
      <!-- <input class="form-control mr-sm-2" type="text" placeholder="Buscar" (keyup.enter)="buscarMedicamento(buscarTexto.value)" #buscarTexto> -->
-       <button
-                (click)="buscarMedicamento(buscarTexto.value)" 
-                class="btn btn-outline my-2 my-sm-0" type="button">Salir</button>  
+        <button
+              class="btn btn-outline my-2 my-sm-0" 
+              type="button">Salir
+        </button>  
     <!--  <a (clic)="logut()" class="btn-logout">
         <span class="btn btn-outline-primary my-2 my-sm-0" aria-hiden="true"></span>
           Buscar
