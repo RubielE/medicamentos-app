@@ -13,6 +13,8 @@ import { ListaOficialComponent } from './components/lista-oficial/lista-oficial.
 import { ComercialGenericoComponent } from './components/comercial-generico/comercial-generico.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { EditarMedicamentoComponent } from './components/editar-medicamento/editar-medicamento.component';
+import { MedicamentosListadoComponent} from './components/client/medicamentos-listado/medicamentos-listado.component';
+import { AuthGuardService } from './services/auth-guard.service'
 
 //import {  } from 'rxjs';
 
@@ -25,11 +27,12 @@ const routes: Routes = [
   { path: 'user-edit', component: UserEditComponent },
 //paths of components
 { path: 'home', component: HomeComponent },
-  { path: 'medicamentos', component: MedicamentosComponent },
+  { path: 'medicamentos', component: MedicamentosComponent, canActivate: [AuthGuardService] },
   { path: 'medicamento/nuevo', component: MedicamentoComponent },
   { path: 'detalle', component: DetalleComponent },
   { path: 'lista-oficial', component: ListaOficialComponent },
   { path: 'comercial-generico', component: ComercialGenericoComponent },
+  { path: 'medicamentos-listado', component: MedicamentosListadoComponent },
  // { path: 'buscar/:termino', component: BuscadorComponent },
   { path: 'editar-medicamento/:id', component: EditarMedicamentoComponent }
 

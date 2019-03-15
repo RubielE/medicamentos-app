@@ -139,7 +139,7 @@
         <th class="text-center">CNB
         </th>
         <th 
-            class="text-right">Option
+            class="text-right">Detalle
             
         </th>
       </tr>
@@ -155,18 +155,8 @@
         <td>{{item.GG}}</td>
         <td>{{item.MMV}}</td>
         <td>{{item.PPR}}</td>
-        <td>{{item.CNB}}</td> 
- 
-        <td col-2>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary btn-sm right w" data-toggle="modal" data-target="#exampleModal"
-                  [routerLink]="['/editar-medicamento', item._id]">
-                  Editar</button>
-                  <button type="button" class="btn btn-danger btn-sm right"
-                  (click)="eliminarMedicamento(item)">
-                    Borrar</button>
-                </div>
-        </td> 
+        <td>{{item.CNB}}</td>
+        <td>{{item.detalle}}</td>  
       </tr> 
     </tbody>
   </table> 

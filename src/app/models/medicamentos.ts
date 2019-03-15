@@ -12,7 +12,8 @@ export class Medicamentos{
         PPR: string,
         CNB: string,
         detalle: string,
-        key$: string 
+        key$: string,
+        userId?: string,
         ) {}
 
 }

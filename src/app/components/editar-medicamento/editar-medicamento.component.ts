@@ -16,6 +16,7 @@ export class EditarMedicamentoComponent implements OnInit {
   public titleSection: string;
   public medicamentos: Medicamentos;
   public errorMessage: any;
+  public alertMessage;
 
   public id: any;
 
@@ -24,7 +25,7 @@ export class EditarMedicamentoComponent implements OnInit {
     private route: ActivatedRoute
   ) {
     this.titleSection = "Editar medicamento";
-    console.log(this.medicamentos);
+    //console.log(this.medicamentos);
   }
 
   ngOnInit() {
@@ -35,9 +36,11 @@ export class EditarMedicamentoComponent implements OnInit {
   getMedicamento() {
     this.route.params.forEach((params: Params) => {
       let id = params['id'];
+      console.log(id);
       this._medicamentosService.getMedicamento(id).subscribe(
         response => {
-          this.medicamentos = response;
+          this.medicamentos = response['data'][0];
+          console.log(this.medicamentos);
             if (!this.medicamentos) {
               this.router.navigate(['/']);
             }
@@ -53,31 +56,31 @@ export class EditarMedicamentoComponent implements OnInit {
     });
   }
 
+  onSubmit(){
+    console.log('this.medicamentos');
+    this.route.params.forEach((params: Params)=>{
+      let id = params['id'];
+      this._medicamentosService.editarMedicamento(id, this.medicamentos).subscribe(
+        res =>{
+          if(!res){
+            this.alertMessage = 'Error en el servidor';
+          }else{
+            this.alertMessage = 'El medicamento se ha actualizado correctamente!';
+            this.medicamentos =  res;
+            
+          }
+        },
+        error =>{
+          var errorMessage = <any>error;
+          if(errorMessage ! = null){
+            var body = JSON.parse(error._body);
+           // this._medicamentosService.alertMessage = body.message;
+            console.log(error);
+          }
+        }
+      );
+    });
+  }
 
-/*
-  actualizarMedicamento(data) {
-    let id = this.medicamentos['_id']
-     let medicamentos = {
-                         fecha: new Date(),
-                         medicamento: this.medicamentos.medicamento,
-                         CHAAM: this.medicamentos.CHAAM,
-                         JJV: this.medicamentos.JJV,
-                         ADGH: this.medicamentos.ADGH,
-                         MFV: this.medicamentos.MFV,
-                         GG: this.medicamento.GG,
-                         MMV: this.medicamento.MMV,
-                         PPR: this.medicamento.PPR,
-                         CNB: this.medicamento.CNB,
-                         detalle: this.medicamento.detalle,
-                         key: this.medicamento.key$,
-     }
-    console.log('evento actualizar')
-    this._medicamentosService.editarMedicamento(id, this.medicamentos).subscribe(resultado => {
-      console.log(resultado)
-    },
-      error => {
-        console.log(JSON.stringify(error));
-      });
-  }  */
 
 }

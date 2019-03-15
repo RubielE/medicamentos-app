@@ -20,7 +20,7 @@ export class UserService {
     login(user_to_login, gethash = null):Observable<any>{
 
         if(gethash != null){
-           user_to_login.gethash = gethash; 
+           user_to_login.gethash = gethash;
         }
         //return ' hola mundo desde el servicio user';
         let json = JSON.stringify(user_to_login);
@@ -51,6 +51,10 @@ export class UserService {
         return this._http.put(this.url+'usuario/update-user/'+user_to_update._id, params, { headers: headers}).pipe(map(res => res));
     }
     */
+    pubic isAuthenticated(): boolean {
+      const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
+      return new Date().getTime() < expiresAt;
+    }
 
 
     getIdentity(){
@@ -73,5 +77,14 @@ export class UserService {
             }
             return this.token;
     }
+
+    logout(){
+        localStorage.removeItem('identity');
+        localStorage.removeItem('token');
+        localStorage.clear();
+
+        this.identity = null;
+        this.token = null;
+      }
 
 }

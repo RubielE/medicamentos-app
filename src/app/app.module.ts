@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/usuario/register/register.compon
 import { UserEditComponent } from './components/usuario/user-edit/user-edit.component';
 
 import { HomeComponent } from './components/home/home.component';
+import { MedicamentosListadoComponent } from './components/client/medicamentos-listado/medicamentos-listado.component';
 import { MedicamentosComponent } from './components/medicamentos/medicamentos.component';
 import { MedicamentoComponent } from './components/medicamento/medicamento.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
@@ -27,6 +28,8 @@ import { FilterPipe } from './pipes/filter.pipe';
 //services
 import { MedicamentosService } from './services/medicamentos.service';
 import { UserService } from './services/user.service';
+import { AuthGuardService } from './services/auth-guard.service';
+
 
 
 
@@ -46,6 +49,7 @@ import { UserService } from './services/user.service';
     NavbarComponent,
     EditarMedicamentoComponent,
     FilterPipe,
+    MedicamentosListadoComponent,
     
   //  RegisterComponent
   ],
@@ -60,7 +64,8 @@ import { UserService } from './services/user.service';
    // UserService
   ],
   providers: [MedicamentosService,
-              UserService],
+              UserService,
+              AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

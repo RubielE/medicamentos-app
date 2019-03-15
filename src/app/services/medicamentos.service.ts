@@ -15,6 +15,7 @@ export class MedicamentosService {
 
 private medicamentos:Medicamentos[]= [];
 private uri: string;
+
 // mdb_url = 'mongodb://a-rubiel:enrique24@ds157735.mlab.com:57735/medicamentos';
  //mdb_url = 'mongodb://127.0.0.1:27017/medicamentos';
 
@@ -61,7 +62,8 @@ private uri: string;
 
 //get del id de registro
 getMedicamento(id: string){
-    return this.httpClient.get("https://farmacia01.herokuapp.com/medicamentos/filtrar/"+ id).map(res => res);
+  var data = [];
+    return this.httpClient.post("https://farmacia01.herokuapp.com/medicamentos/filtrar/"+ id, data).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/medicamentos/filtrar/"+ id, {headers: Header});
 }
 

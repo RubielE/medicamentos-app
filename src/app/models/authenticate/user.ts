@@ -1,3 +1,8 @@
+export class roles{
+    cliente?: boolean;
+    admin?: boolean; 
+}
+
 export  class Usuario {
     constructor (
     
