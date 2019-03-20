@@ -1,0 +1,100 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en inmunoquímica </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="inmunoquimica.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+          <option value="Ácido fólico/folato (FOL)">Ácido fólico/folato (FOL)</option>
+          <option value="BHCG cuantitativa/Gonadotropina coriónica (embarazo)">BHCG cuantitativa/Gonadotropina coriónica (embarazo)</option>
+          <option value="Cortisol am">Cortisol am</option>
+          <option value="Cortisol pm">Cortisol pm</option>
+          <option value="Dihidroepialdosterona (DHSO4, DHS)">Dihidroepialdosterona (DHSO4, DHS)</option>
+          <option value="Electroforesis de proteina">Electroforesis de proteina</option>
+          <option value="Estradiol">Estradiol</option>
+          <option value="Ferritina">Ferritina</option>
+          <option value="Hormona de crecimiento">Hormona de crecimiento</option>
+          <option value="Hormona folículo estimulante (FSH)">Hormona folículo estimulante (FSH)</option>
+          <option value="Hormona paratotiodea (PTH) ">Hormona paratotiodea (PTH) </option>
+          <option value="Insulina">Insulina</option>
+          <option value="LH (Hormona Luteinizante)">LH (Hormona Luteinizante)</option>
+          <option value="Progesterona">Progesterona</option>
+          <option value="Prolactina">Prolactina</option>
+          <option value="PSA LIBRE">PSA LIBRE</option>
+          <option value="PSA TOTAL">PSA TOTAL</option>
+          <option value="T3 libre">T3 libre</option>
+          <option value="T3 total ">T3 total </option>
+          <option value="T4 libre">T4 libre</option>
+          <option value="T4 total ">T4 total </option>
+          <option value="Testosterona">Testosterona</option>
+          <option value="TSH">TSH</option>
+          <option value="Vitamina B12">Vitamina B12</option>
+          <option value="Vitamina D">Vitamina D</option>
+          <option value="Acido valproico">Acido valproico</option>
+          <option value="Alcoholemia">Alcoholemia</option>
+          <option value="Carbamazepina">Carbamazepina</option>
+          <option value="Cocaina">Cocaina</option>
+          <option value="Digoxina">Digoxina</option>
+          <option value="Fenitoina">Fenitoina</option>
+          <option value="Fenobarbital">Fenobarbital</option>
+          <option value="Litlo">Litlo</option>
+          <option value="Marihuana">Marihuana</option>
+          <option value="Metrotrexate">Metrotrexate</option>
+          <option value="Teofilina">Teofilina</option>
+          <option value="AFP">AFP</option>
+          <option value="CA 125">CA 125</option>
+          <option value="CA 15-3">CA 15-3</option>
+          <option value="CA 19-9">CA 19-9</option>
+          <option value="CEA">CEA</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="inmunoquimica.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="inmunoquimica.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista inmunoquimica..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

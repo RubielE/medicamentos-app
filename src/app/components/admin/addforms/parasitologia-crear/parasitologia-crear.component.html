@@ -1,0 +1,69 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en parasitología </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="parasitologia.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+
+          <option value="APT">APT</option>
+          <option value="Azucar Reductores">Azucar Reductores</option>
+          <option value="Azul de Metileno">Azul de Metileno</option>
+          <option value="Criptosporidium">Criptosporidium</option>
+          <option value="Heces Generales">Heces Generales</option>
+          <option value="Helicobacter Pilory Heces">Helicobacter Pilory Heces</option>
+          <option value="Rotavirus">Rotavirus</option>
+          <option value="Sangre Oculta en Heces">Sangre Oculta en Heces</option>
+          <option value="Test de Graham">Test de Graham</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="parasitologia.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="parasitologia.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista parasitología..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,470 @@
+<router-outlet></router-outlet>
+<div class="container">
+  <div class="row">
+      <div class="col col-md-12 card card-inverse card-primary text-center">
+        <blockquote class="card-blockquote">
+          <h2>Crear nuevo medicamento </h2>
+        </blockquote>
+    </div>
+  </div><br>
+
+
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+    <div class="form-group row">
+      <label for="fecha" class="col-2 col-form-label">Fecha</label>
+      <div class="col-8">
+        <input [(ngModel)]="medicamentos.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="date"
+          value="fecha" id="fecha">
+      </div>
+      <div class="col-2">
+        <span
+              [routerLink]="['/medicamento/nuevo', medicamento._id]"
+              class="btn btn-primary btn-md">
+              Agregar nuevo
+        </span>
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Seleccione medicamento</label>
+
+
+      <select [(ngModel)]="medicamentos.medicamento" value="medicamento" name="medicamento" #medicamento="ngModel" class="form-control" id="medicamento">
+
+        <option value="Acetato Aluminio Ác.(acetato Ca y sulfato Al), polvo 2 - 3 g">Acetato Aluminio Ác.(acetato Ca y sulfato Al), polvo 2 - 3 g</option>
+        <option value="Acetato de Aluminio ácido, 0.050%- 0.060%, crema">Acetato de Aluminio ácido, 0.050%- 0.060%, crema</option>
+        <option value="Acetato de Aluminio ácido, 0.050%- 0.060%, loción">Acetato de Aluminio ácido, 0.050%- 0.060%, loción</option>
+        <option value="Acetato de aluminio con ácido acético gotas,solución ótica">Acetato de aluminio con ácido acético gotas,solución ótica</option>
+        <option value="Aciclovir ungüento oftálmico 3%">Aciclovir ungüento oftálmico 3%</option>
+        <option value="Ácido acetílsalicilico 75-100 mg. (aspirina infantil) tab.">Ácido acetílsalicilico 75-100 mg. (aspirina infantil) tab.</option>
+        <option value="Ácido Ascórbico tab. 500 mg. tab. (Vitamina C)">Ácido Ascórbico tab. 500 mg. tab. (Vitamina C)</option>
+        <option value="ACIDO ALENDRÓNICO (ALENDRONATO SÓDICO) 70 mg tab.">ACIDO ALENDRÓNICO (ALENDRONATO SÓDICO) 70 mg tab.</option>
+        <option value="Ácido Fólico 5 mg. tabletas">Ácido Fólico 5 mg. tabletas</option>
+        <option value="Acitretina 25 mg. cápsulas">Acitretina 25 mg. cápsulas</option>
+        <option value="Alfacalcidol 1 mcg. Tabletas">Alfacalcidol 1 mcg. Tabletas</option>
+        <option value="Alopurinol 300mg. tableta">Alopurinol 300mg. tableta</option>
+        <option value="Alquitrán de Hulla con corticoide 0,25% crema">Alquitrán de Hulla con corticoide 0,25% crema</option>
+        <option value="Amantadina 100 m.g tabletas">Amantadina 100 m.g tabletas</option>
+        <option value="Amiodarona 200 mg. tabletas">Amiodarona 200 mg. tabletas</option>
+        <option value="Amitriptilina 10 mg tabletas o cápsulas">Amitriptilina 10 mg tabletas o cápsulas</option>
+        <option value="Amitriptilina 25 mg. tabletas o cápsulas">Amitriptilina 25 mg. tabletas o cápsulas</option>
+        <option value="Amlodipina 5 mg tabletas">Amlodipina 5 mg tabletas</option>
+        <option value="Amoxicilina 400 mg con Ácido Clavulánico 57 mg. Susp.">Amoxicilina 400 mg con Ácido Clavulánico 57 mg. Susp.</option>
+        <option value="Amoxicilina 500 mg. con Äcido Clavulánico 125 mg. tab.">Amoxicilina 500 mg. con Äcido Clavulánico 125 mg. tab.</option>
+        <option value="Amoxicilina 250 mg./ 5 ml. suspensión">Amoxicilina 250 mg./ 5 ml. suspensión</option>
+        <option value="Amoxicilina 500 mg. Cápsulas o tabletas">Amoxicilina 500 mg. Cápsulas o tabletas</option>
+        <option value="Anovulatorios orales tab. Etinilestradiol, 0.020-0.030mg/ Levonorgestrel, 0.15mg o Gestodeno, 0.075mg,
+        tab.">Anovulatorios orales tab. Etinilestradiol, 0.020-0.030mg/ Levonorgestrel, 0.15mg o Gestodeno, 0.075mg,
+          tab.</option>
+        <option value="Antihemorroidal : Hidrocortisona o Betametasona o">Antihemorroidal : Hidrocortisona o Betametasona o</option>
+        <option value="Prednisolona/ Lidocaína o Benzocaína, pomada o ung. Rectal"> Prednisolona/ Lidocaína o Benzocaína, pomada o ung. Rectal</option>
+        <option value="Antihistamínico con descong. nasal jarabe Antihistamínico: Bromfeniramina, 2mg/5ml, o Clorfeniramina,
+        2mg/5ml,o">Antihistamínico con descong. nasal jarabe Antihistamínico: Bromfeniramina, 2mg/5ml, o Clorfeniramina,
+          2mg/5ml,o</option>
+        <option value="Dexbromfeniramina, 1.5mg/5ml,con Descong. nasal: fenilefrina, 5mg/5ml, o Pseudoefedrina, 30mg/5ml, V.O.">Dexbromfeniramina, 1.5mg/5ml,con Descong. nasal: fenilefrina, 5mg/5ml, o Pseudoefedrina, 30mg/5ml, V.O.</option>
+        <option value="Antihistamínico con descong. nasal tabletas Bromfeniramina,4mg, o Carbinoxamina, 4mg, o Clorfeniramina,
+        4mg,">Antihistamínico con descong. nasal tabletas Bromfeniramina,4mg, o Carbinoxamina, 4mg, o Clorfeniramina,
+          4mg,</option>
+        <option value="Fenilefrina, 20mg Pseudoefedrina, 60mg, tableta,cápsula V.O.">Fenilefrina, 20mg Pseudoefedrina, 60mg, tableta,cápsula V.O.</option>
+        <option value="Atenolol 100 mg. tabletas">Atenolol 100 mg. tabletas</option>
+        <option value="Atropina gotas oftálmicas 1%">Atropina gotas oftálmicas 1%</option>
+        <option value="Azatioprina 50 mg. Tabletas">Azatioprina 50 mg. Tabletas</option>
+        <option value="Azelastina 0,05% gotas oftálmicas">Azelastina 0,05% gotas oftálmicas</option>
+        <option value="Azitromicina 200 mg./ 5 m.l suspensión">Azitromicina 200 mg./ 5 m.l suspensión</option>
+        <option value="Azitromicina 500 mg. Cápsula o tabletas">Azitromicina 500 mg. Cápsula o tabletas</option>
+        <option value="Beclometasona inhalador bucal 50 mcg.">Beclometasona inhalador bucal 50 mcg.</option>
+        <option value="Benzoato de Bencilo loción 25 %">Benzoato de Bencilo loción 25 %</option>
+        <option value="Bicalutamida 50 mg. tabletas">Bicalutamida 50 mg. tabletas</option>
+        <option value="Biperideno 2 mg. Tabletas">Biperideno 2 mg. Tabletas</option>
+        <option value="Brimonidina 0.2% gotas oftálmicas">Brimonidina 0.2% gotas oftálmicas</option>
+        <option value="Cabergolina 0,5 mg tabletas (reemplaza bromocriptina)">Cabergolina 0,5 mg tabletas (reemplaza bromocriptina)</option>
+        <option value="Calamina loción 8%">Calamina loción 8%</option>
+        <option value="Calcio carbonato 500 mg. - 1000 mg . tabletas">Calcio carbonato 500 mg. - 1000 mg . tabletas</option>
+        <option value="Calcipotriol 50 mcg. con betametasona 0.5 mg. gel">Calcipotriol 50 mcg. con betametasona 0.5 mg. gel</option>
+        <option value="Captopril 25 mg. comprimido v.o.">Captopril 25 mg. comprimido v.o.</option>
+        <option value="100 mg./ 5 ml. susp."> 100 mg./ 5 ml. susp.</option>
+        <option value="Carbamacepina 200 mg. tabletas"> Carbamacepina 200 mg. tabletas</option>
+        <option value="Carbonato de Litio 300 mg. Cápsula o tableta">Carbonato de Litio 300 mg. Cápsula o tableta</option>
+        <option value="Carvedilol 6,25 mg tabletas"> Carvedilol 6,25 mg tabletas</option>
+        <option value="Cefalexina 250 mg./ 5ml. suspensión">Cefalexina 250 mg./ 5ml. suspensión</option>
+        <option value="Cefalexina 500 mg cápsulas"> Cefalexina 500 mg cápsulas</option>
+        <option value="Ciclopentolato gotas oftálmicas 1%"> Ciclopentolato gotas oftálmicas 1%</option>
+        <option value="Ciprofloxacina 500 mg. tabletas">Ciprofloxacina 500 mg. tabletas</option>
+        <option value="Claritromicina tab 500 mg.">Claritromicina tab 500 mg.</option>
+        <option value="Clindamicina 300 mg. Tabletas o cápsulas">Clindamicina 300 mg. Tabletas o cápsulas</option>
+        <option value="Clindamicina 75 mg. suspensión"> Clindamicina 75 mg. suspensión</option>
+        <option value="Clomifeno 50 mg. tabletas"> Clomifeno 50 mg. tabletas</option>
+        <option value="Clonazepam 2 mg. tabletas">Clonazepam 2 mg. tabletas</option>
+        <option value="Clonazepam 2.5 mg. gotas">Clonazepam 2.5 mg. gotas</option>
+        <option value="Clopidogrel disulfato, 75mg, tableta">Clopidogrel disulfato, 75mg, tableta</option>
+        <option value="Cloranfenicol gotas oftálmicas 0.5 %">Cloranfenicol gotas oftálmicas 0.5 %</option>
+        <option value="Cloranfenicol ungüento oftálmico 1%">Cloranfenicol ungüento oftálmico 1%</option>
+        <option value="Clordiazepóxido 10 mg. cápsulas"> Clordiazepóxido 10 mg. cápsulas</option>
+        <option value="Clorfeniramina 4 mg. tabletas">Clorfeniramina 4 mg. tabletas</option>
+        <option value="Clorferinamina 2 mg-2.5 mg/5 ml jarabe"> Clorferinamina 2 mg-2.5 mg/5 ml jarabe</option>
+        <option value="Clorhexidina gluconato enjuague bucal 0,2%">Clorhexidina gluconato enjuague bucal 0,2%</option>
+        <option value="Clorpromazina 100 mg.">Clorpromazina 100 mg.</option>
+        <option value="Clotrimazol solución 1-2%">Clotrimazol solución 1-2%</option>
+        <option value="Clotrimazol crema vaginal 1- 2%">Clotrimazol crema vaginal 1- 2%</option>
+        <option value="Clozapina 100 mg"> Clozapina 100 mg</option>
+        <option value="Colchicina 0.5 mg - 0.6 mg. tableta">Colchicina 0.5 mg - 0.6 mg. tableta</option>
+        <option value="Colestiramina 4 g. polvo (sobres)">Colestiramina 4 g. polvo (sobres)</option>
+        <option value="Complejo B elixir">Complejo B elixir</option>
+        <option value="Complejo B tabletas">Complejo B tabletas</option>
+        <option value="Corticoide baja pot (Hidrocortisona 0.25-2.5%) crema">Corticoide baja pot (Hidrocortisona 0.25-2.5%) crema</option>
+        <option value="Corticoide baja pot.(Hidrocortisona 0.25-2.5%) loc.">Corticoide baja pot.(Hidrocortisona 0.25-2.5%) loc.</option>
+        <option value="Corticoide de potencia alta: Amcinonide, 0.1% o Betametasona dipropionato, 0.05% o Fluocinolona
+        acetónida, 0.2% o">Corticoide de potencia alta: Amcinonide, 0.1% o Betametasona dipropionato, 0.05% o Fluocinolona
+          acetónida, 0.2% o</option>
+        <option value="Halcinonida, 1% o Mometasona furoato, 0.1%, crema, tubo, 15g, vía tópica">Halcinonida, 1% o Mometasona furoato, 0.1%, crema, tubo, 15g, vía tópica</option>
+        <option value="Corticoide súper potente crema (CLOBETAZOL) 0.05%">Corticoide súper potente crema (CLOBETAZOL) 0.05%</option>
+        <option value="Corticoide pot. media CREMA Betametasona 0.1%">Corticoide pot. media CREMA Betametasona 0.1%</option>
+        <option value="Corticoide pot. media loc. capilar: Betametasona 0.1%">Corticoide pot. media loc. capilar: Betametasona 0.1%</option>
+        <option value="Cromoglicato sódico 4% NASAL">Cromoglicato sódico 4% NASAL</option>
+        <option value="Danazol tabletas 200 mg.">Danazol tabletas 200 mg.</option>
+        <option value="Deflazacort tab. 6 mg.">Deflazacort tab. 6 mg.</option>
+        <option value="Dasatinib Monohidrato, 70mg, tableta">Dasatinib Monohidrato, 70mg, tableta</option>
+        <option value="Desmopresina 0.1 mg. solución nasal">Desmopresina 0.1 mg. solución nasal</option>
+        <option value="Dexametasona 4 mg. tabletas">Dexametasona 4 mg. tabletas</option>
+        <option value="Dextrometorfano jbe. 10 mg/5 ml.">Dextrometorfano jbe. 10 mg/5 ml.</option>
+        <option value="Diazepam 2 mg. jarabe">Diazepam 2 mg. jarabe</option>
+        <option value="Diazepam 5 mg. tabletas">Diazepam 5 mg. tabletas</option>
+        <option value="Diclofenaco sódico 50mg tabletas">Diclofenaco sódico 50mg tabletas</option>
+        <option value="Diclofenaco sódico gotas oftálmicas 0.1%">Diclofenaco sódico gotas oftálmicas 0.1%</option>
+        <option value="Diclofenaco sódico supositorios 50 mg">Diclofenaco sódico supositorios 50 mg</option>
+        <option value="Dicloxacilina 250 mg./ 5 ml. suspensión">Dicloxacilina 250 mg./ 5 ml. suspensión</option>
+        <option value="Dicloxacilina 500 mg. cápsulas">Dicloxacilina 500 mg. cápsulas</option>
+        <option value="Difenhidramina 12.5 mg./ 5 ml. líquido">Difenhidramina 12.5 mg./ 5 ml. líquido</option>
+        <option value="Difenhidramina 25 mg. cápsulas">Difenhidramina 25 mg. cápsulas</option>
+        <option value="Digoxina 0.25 mg. tableta">Digoxina 0.25 mg. tableta</option>
+        <option value="Elixir 0.05 mg."> Elixir 0.05 mg.</option>
+        <option value="Diltiazem 180 mg. tabletas">Diltiazem 180 mg. tabletas</option>
+        <option value="Diltiazem 60 mg">Diltiazem 60 mg</option>
+        <option value="Dimenhidrinato 50 mg. tabletas">Dimenhidrinato 50 mg. tabletas</option>
+        <option value="Dorzolamida 2% gotas oftálmicas">Dorzolamida 2% gotas oftálmicas</option>
+        <option value="Doxazocina o Terazocina 2 mg.Cápsula o tabletas">Doxazocina o Terazocina 2 mg.Cápsula o tabletas</option>
+        <option value="Doxiciclina 100 mg. tabletas">Doxiciclina 100 mg. tabletas</option>
+        <option value="Duloxetina 60mg, cápsula o tableta,V.O. (Psquiatría)">Duloxetina 60mg, cápsula o tableta,V.O. (Psquiatría)</option>
+        <option value="Enema: Sodio bifosfato 19g/sodio fosfato 7g">Enema: Sodio bifosfato 19g/sodio fosfato 7g</option>
+        <option value="Eritromicina 250 mg. suspensión">Eritromicina 250 mg. suspensión</option>
+        <option value="Eritromicina 500 mg. tabletas">Eritromicina 500 mg. tabletas</option>
+        <option value="ESCITALOPRAM 10mg, tableta, V.O. (Psiquiatría.) nuevo">ESCITALOPRAM 10mg, tableta, V.O. (Psiquiatría.) nuevo</option>
+        <option value="Escopolamina 10 mg. (hioscina)">Escopolamina 10 mg. (hioscina)</option>
+        <option value="Espiramicina (500 mg.) 1.0 - 1.5 millones U.I. tab.">Espiramicina (500 mg.) 1.0 - 1.5 millones U.I. tab.</option>
+        <option value="Espironolactona 25 mg. tableta">Espironolactona 25 mg. tableta</option>
+        <option value="Estrógenos Conjugados 0.625 mg. tabletas">Estrógenos Conjugados 0.625 mg. tabletas</option>
+        <option value="Estrógenos conjugados 0.625 mg. crema vaginal">Estrógenos conjugados 0.625 mg. crema vaginal</option>
+        <option value="Expectorante sin azúcar jarabe">Expectorante sin azúcar jarabe</option>
+        <option value="Fenitoína sódica 100mg. Cápsulas Acción Modificada">Fenitoína sódica 100mg. Cápsulas Acción Modificada</option>
+        <option value="Fenitoína sódica 125 m.g suspensión">Fenitoína sódica 125 m.g suspensión</option>
+        <option value="Fenobarbital 32 mg. tabletas">Fenobarbital 32 mg. tabletas</option>
+        <option value="Fenobarbital 64 mg. tabletas">Fenobarbital 64 mg. tabletas</option>
+        <option value="Fenofibrato 200-250 mg. cáp.(fibrato micronizado)">Fenofibrato 200-250 mg. cáp.(fibrato micronizado)</option>
+        <option value="Finasteride 5 mg. tabletas">Finasteride 5 mg. tabletas</option>
+        <option value="Fluconazol 50 mg. Cápsulas">Fluconazol 50 mg. Cápsulas</option>
+        <option value="Fludocortisona acetato 0,1 mg. tabletas">Fludocortisona acetato 0,1 mg. tabletas</option>
+        <option value="Fluoxetina 20 mg tabletas">Fluoxetina 20 mg tabletas</option>
+        <option value="Fluoracilo 5% crema">Fluoracilo 5% crema</option>
+        <option value="fumarato,9-12mcg /inhalación, polvo"> fumarato,9-12mcg /inhalación, polvo</option>
+        <option value="Fumarato Ferroso 140 mg. /5 ml. Suspensión">Fumarato Ferroso 140 mg. /5 ml. Suspensión</option>
+        <option value="Furosemida 40 mg. tabletas">Furosemida 40 mg. tabletas</option>
+        <option value="Fusidato sódico, 2%, gasa impregnada,">Fusidato sódico, 2%, gasa impregnada,</option>
+        <option value="Fusidato sódico ungüento tópico 2%">Fusidato sódico ungüento tópico 2%</option>
+        <option value="Gabapentina 300 mg cápsulas">Gabapentina 300 mg cápsulas</option>
+        <option value="Gentamicina sulfato, 0.3%, ungüento oftálmico">Gentamicina sulfato, 0.3%, ungüento oftálmico</option>
+        <option value="Gestrinona cápsula 2.5 mg.">Gestrinona cápsula 2.5 mg.</option>
+        <option value="Glibenclamida 5 mg. tabletas">Glibenclamida 5 mg. tabletas</option>
+        <option value="Glicazida 80 mg. tableta">Glicazida 80 mg. tableta</option>
+        <option value="Guayacolato de Glicerilo 100 mg/ 5ml. Jbe.">Guayacolato de Glicerilo 100 mg/ 5ml. Jbe.</option>
+        <option value="Haloperidol/Halofluperidol 5 mg. tabletas">Haloperidol/Halofluperidol 5 mg. tabletas</option>
+        <option value="Haloperidol/Halofluperidol 2mg. gotas (Haldol)">Haloperidol/Halofluperidol 2mg. gotas (Haldol)</option>
+        <option value="Hidralazina 50 mg. tabletas">Hidralazina 50 mg. tabletas</option>
+        <option value="Hidroclorotiazida con triamtereno tabletas 25/50 mg">Hidroclorotiazida con triamtereno tabletas 25/50 mg</option>
+        <option value="Hidroxicina 10 mg./ 5 ml. Líquido (0,2%)">Hidroxicina 10 mg./ 5 ml. Líquido (0,2%)</option>
+        <option value="Hidroxicina 25 mg. tabletas">Hidroxicina 25 mg. tabletas</option>
+        <option value="Hidroxicloroquina 400 mg. tabletas">Hidroxicloroquina 400 mg. tabletas</option>
+        <option value="Hidróxido de Aluminio y Magnesio 5.9-8.3% (suspensión)">Hidróxido de Aluminio y Magnesio 5.9-8.3% (suspensión)</option>
+        <option value="Hidroxiurea (Hidroxicarbamida) 500 mg. tabletas">Hidroxiurea (Hidroxicarbamida) 500 mg. tabletas</option>
+        <option value="Hierro (sal ferrosa), 25mg/ml de hierro elemental, gotas">Hierro (sal ferrosa), 25mg/ml de hierro elemental, gotas</option>
+        <option value="Hierro (sal ferrosa) 50 – 100 mg. hierro elemental tab.">Hierro (sal ferrosa) 50 – 100 mg. hierro elemental tab.</option>
+        <option value="Homatropina elixir 5mg/5cc">Homatropina elixir 5mg/5cc</option>
+        <option value="Ibuprofeno 400 mg. tabletas">Ibuprofeno 400 mg. tabletas</option>
+        <option value="Ibuprofeno susp. 100 mg.">Ibuprofeno susp. 100 mg.</option>
+        <option value="Imipramina 10 mg. tabletas">Imipramina 10 mg. tabletas</option>
+        <option value="Indapamida 1,5 mg. tabletas">Indapamida 1,5 mg. tabletas</option>
+        <option value="Insulina Glargina 100 UI/ml. Sol . Vial (Lantus comercial)">Insulina Glargina 100 UI/ml. Sol . Vial (Lantus comercial)</option>
+        <option value="Insulina Análoga Lispro 100 UI/ml sol. Vial S.C., I.V.">Insulina Análoga Lispro 100 UI/ml sol. Vial S.C., I.V.</option>
+        <option value="Insulina NPH (humana), 100 UI/ml. (verde)">Insulina NPH (humana), 100 UI/ml. (verde)</option>
+        <option value="Insulina Regular o rápida humana 100 UI/ml (amarillo)">Insulina Regular o rápida humana 100 UI/ml (amarillo)</option>
+        <option value="Ipratropio bromuro, 250mcg/ml, solución, frasco, 20ml, nebulización.">Ipratropio bromuro, 250mcg/ml, solución, frasco, 20ml, nebulización.</option>
+        <option value="Ipatropio Bromuro aerosol 15 -20 mcg bucal (inhalador)">Ipatropio Bromuro aerosol 15 -20 mcg bucal (inhalador)</option>
+        <option value="Irbesartán 300 mg tabletas">Irbesartán 300 mg tabletas</option>
+        <option value="Isosorbide dinitrato 10 mg tabletas">Isosorbide dinitrato 10 mg tabletas</option>
+        <option value="Isosorbide 5 mg dinitrato tabletas sublingual">Isosorbide 5 mg dinitrato tabletas sublingual</option>
+        <option value="Itraconazol 100 mg. tableta">Itraconazol 100 mg. tableta</option>
+        <option value="Ivermectina 6 mg. tabletas">Ivermectina 6 mg. tabletas</option>
+        <option value="Jeringuillas para insulina U-100/1cc">Jeringuillas para insulina U-100/1cc</option>
+        <option value="Ketoconazol crema tópica 1-2%">Ketoconazol crema tópica 1-2%</option>
+        <option value="Lactulosa líq. 667 mg/ml">Lactulosa líq. 667 mg/ml</option>
+        <option value="Lágrimas artificiales 0,2 -0,5 % gotas oftálmicas">Lágrimas artificiales 0,2 -0,5 % gotas oftálmicas</option>
+        <option value="Lamotrigina 100 mg tabletas">Lamotrigina 100 mg tabletas</option>
+        <option value="Latanoprost gotas oftálmicas 50 mcg/ml.">Latanoprost gotas oftálmicas 50 mcg/ml.</option>
+        <option value="Letrozole 2,5 mg. tabletas">Letrozole 2,5 mg. tabletas</option>
+        <option value="Leflunomida 20 mg. tabletas">Leflunomida 20 mg. tabletas</option>
+        <option value="Levodopa/carbidopa tabletas 250/25 mg.">Levodopa/carbidopa tabletas 250/25 mg.</option>
+        <option value="Levofloxacina 500 mg. tabletas">Levofloxacina 500 mg. tabletas</option>
+        <option value="Levomepromacina 25 mg. tabletas">Levomepromacina 25 mg. tabletas</option>
+        <option value="Levotiroxina 0.1 mg. (100 mcg.) tabletas">Levotiroxina 0.1 mg. (100 mcg.) tabletas</option>
+        <option value="Lignocaína gel 2%">Lignocaína gel 2%</option>
+        <option value="Lisinopril 20 mg. tabletas">Lisinopril 20 mg. tabletas</option>
+        <option value="Loperamida 2 mg. tabletas">Loperamida 2 mg. tabletas</option>
+        <option value="Loprazolam 2 mg. tabletas">Loprazolam 2 mg. tabletas</option>
+        <option value="Loratadina tab. 10 mg.">Loratadina tab. 10 mg.</option>
+        <option value="Lorazepam tab. 2mg. tabletas">Lorazepam tab. 2mg. tabletas</option>
+        <option value="Maprotilina 25 mg. tabletas">Maprotilina 25 mg. tabletas</option>
+        <option value="Mebendazol 100 mg. tabletas">Mebendazol 100 mg. tabletas</option>
+        <option value="Medroxiprogesterona 5 mg. tabletas">Medroxiprogesterona 5 mg. tabletas</option>
+        <option value="Melfalano 2 mg">Melfalano 2 mg</option>
+        <option value="Mentol Compuesto 10 -20% ungüento">Mentol Compuesto 10 -20% ungüento</option>
+        <option value="Mercaptopurina tabletas 50 mg.">Mercaptopurina tabletas 50 mg.</option>
+        <option value="Metacresolsulfónico líquido (Policresuleno)">Metacresolsulfónico líquido (Policresuleno)</option>
+        <option value="Metacresolsulfónico (Policresuleno) 18mg/g Gel VAGINAL">Metacresolsulfónico (Policresuleno) 18mg/g Gel VAGINAL</option>
+        <option value="Metformina clorhidrato tabletas 850 mg.">Metformina clorhidrato tabletas 850 mg.</option>
+        <option value="Metildopa (alfametildopa) 250 mg.">Metildopa (alfametildopa) 250 mg.</option>
+        <option value="Metilfenidato 10 mg. tabletas">Metilfenidato 10 mg. tabletas</option>
+        <option value="Metoclopramida 5mg/5/ml jarabe">Metoclopramida 5mg/5/ml jarabe</option>
+        <option value="Metotrexate 2.5 mg. tabletas">Metotrexate 2.5 mg. tabletas</option>
+        <option value="Metronidazol 125 mg. suspensión">Metronidazol 125 mg. suspensión</option>
+        <option value="Metronidazol, 500mg, óvulo, vía vaginal">Metronidazol, 500mg, óvulo, vía vaginal</option>
+        <option value="Metronidazol 500 mg. tabletas">Metronidazol 500 mg. tabletas</option>
+        <option value="Micofenolato 250 mg. tabletas">Micofenolato 250 mg. tabletas</option>
+        <option value="Minoxidil 10 mg. Tabletas">Minoxidil 10 mg. Tabletas</option>
+        <option value="Mod. De Peptido de Colageno Porcino (Gelicart)">Mod. De Peptido de Colageno Porcino (Gelicart)</option>
+        <option value="Mometasona furoato polvo seco Bucal 200 mcg">Mometasona furoato polvo seco Bucal 200 mcg</option>
+        <option value="Mometasona susp nasal 50 mcg.">Mometasona susp nasal 50 mcg.</option>
+        <option value="Montelukast 10 mg. tabletas (adultos)">Montelukast 10 mg. tabletas (adultos)</option>
+        <option value="Montelukast 5 mg. Tabletas nasticables">Montelukast 5 mg. Tabletas nasticables</option>
+        <option value="Montelukast 4 mg. Tabletas masticable">Montelukast 4 mg. Tabletas masticable</option>
+        <option value="Morfina 15 mg. tabletas">Morfina 15 mg. tabletas</option>
+        <option value="Multivitaminas con Minerales tabletas">Multivitaminas con Minerales tabletas</option>
+        <option value="Multivitaminas gotas pediátricas">Multivitaminas gotas pediátricas</option>
+        <option value="Nafazolina gotas oftálmicas 0.1%">Nafazolina gotas oftálmicas 0.1%</option>
+        <option value="Nistatina 100,000 UI / ml suspensión gotas"> Nistatina 100,000 UI / ml suspensión gotas</option>
+        <option value="Nitrofurantoína 100 mg. Tableta">Nitrofurantoína 100 mg. Tableta</option>
+        <option value="Nitrofurantoína 50 mg. suspensión">Nitrofurantoína 50 mg. suspensión</option>
+        <option value="Nitroglicerina sublingual 0.4 mg">Nitroglicerina sublingual 0.4 mg</option>
+        <option value="Olanzapina 10 mg. tableta o tableta dispersable">Olanzapina 10 mg. tableta o tableta dispersable</option>
+        <option value="Omeprazol càpsulas o tabletas 20 mg.">Omeprazol càpsulas o tabletas 20 mg.</option>
+        <option value="Oxibutunina 5 mg. tabletas">Oxibutunina 5 mg. tabletas</option>
+        <option value="Oxicodona clorhidrato, 20mg, tableta de liberacion prolongada.">Oxicodona clorhidrato, 20mg, tableta de liberacion prolongada.</option>
+        <option value="Paracetamol 120-160 mg jbe infantil">Paracetamol 120-160 mg jbe infantil</option>
+        <option value="Paracetamol 300 mg. supositorio">Paracetamol 300 mg. supositorio</option>
+        <option value="Paracetamol 500 mg. tabletas">Paracetamol 500 mg. tabletas</option>
+        <option value="Paracetamol 300 - 325 mg. con codeína 30 mg. Tab.">Paracetamol 300 - 325 mg. con codeína 30 mg. Tab.</option>
+        <option value="Paracetamol 100 mg/ ml gotas pediátricas">Paracetamol 100 mg/ ml gotas pediátricas</option>
+        <option value="Pasiflora 500 mg/ 5 ml, solución">Pasiflora 500 mg/ 5 ml, solución</option>
+        <option value="Pasta al agua 25 %">Pasta al agua 25 %</option>
+        <option value="Pentoxifilina 400 mg. tabletas">Pentoxifilina 400 mg. tabletas</option>
+        <option value="Perindopril tab. 5 mg">Perindopril tab. 5 mg</option>
+        <option value="Peróxido de Benzoilo 5% gel">Peróxido de Benzoilo 5% gel</option>
+        <option value="Pipacetato gotas 40mg/ml, (Selvigón)">Pipacetato gotas 40mg/ml, (Selvigón)</option>
+        <option value="Piperazina 500 mg/5ml jarabe">Piperazina 500 mg/5ml jarabe</option>
+        <option value="Pirantel/oxantel Pamoato, 250mg/250mg/5ml">Pirantel/oxantel Pamoato, 250mg/250mg/5ml</option>
+        <option value="Piridostigmina 60 mg. tab.">Piridostigmina 60 mg. tab.</option>
+        <option value="Piridoxina 50 mg. tabletas">Piridoxina 50 mg. tabletas</option>
+        <option value="Pirimetamina 25 mg. tabletas">Pirimetamina 25 mg. tabletas</option>
+        <option value="Polimixina/Neomicina/Cort. 1% Gotas óticas">Polimixina/Neomicina/Cort. 1% Gotas óticas</option>
+        <option value="Potasio gluconato 20 mEq/ 15 ml, elixir">Potasio gluconato 20 mEq/ 15 ml, elixir</option>
+        <option value="Pramipexol tab 1 mg">Pramipexol tab 1 mg</option>
+        <option value="Pramipexol tab 0,25 mg">Pramipexol tab 0,25 mg</option>
+        <option value="Prazosina 2mg. tableta">Prazosina 2mg. tableta</option>
+        <option value="Prednisolona tab. 5 mg. Tabletas">Prednisolona tab. 5 mg. Tabletas</option>
+        <option value="Prednisona 50 mg. tabletas">Prednisona 50 mg. tabletas</option>
+        <option value="Prednisona 1% (Prednisolona) acetato gotas oftálmicas">Prednisona 1% (Prednisolona) acetato gotas oftálmicas</option>
+        <option value="Prednisolona jbe 15 mg./5cc ó 3 mg./cc">Prednisolona jbe 15 mg./5cc ó 3 mg./cc</option>
+        <option value="Propafenona 150mg. tableta">Propafenona 150mg. tableta</option>
+        <option value="Propranolol 10 mg. tabletas">Propranolol 10 mg. tabletas</option>
+        <option value="Propranolol 40 mg. tabletas">Propranolol 40 mg. tabletas</option>
+        <option value="PSYLLIUM 49% Polvo o granulado">PSYLLIUM 49% Polvo o granulado</option>
+        <option value="Quetiapina 200 mg. tabletas">Quetiapina 200 mg. tabletas</option>
+        <option value="Ranitidina 150 mg. /10 ml Jbe.">Ranitidina 150 mg. /10 ml Jbe.</option>
+        <option value="Ranitidina 150 mg. tabletas">Ranitidina 150 mg. tabletas</option>
+        <option value="Rivastigmina 9 mg. parches">Rivastigmina 9 mg. parches</option>
+        <option value="Rivastigmina 18 mg. parches">Rivastigmina 18 mg. parches</option>
+        <option value="Ruibarbo 1.5% y sodio 3.5% mixtura frasco">Ruibarbo 1.5% y sodio 3.5% mixtura frasco</option>
+        <option value="Salbutamol inhalador 100 mg. (Inhalador bucal)">Salbutamol inhalador 100 mg. (Inhalador bucal)</option>
+        <option value="Salbutamol solución para nebulizador/inhaloterapia">Salbutamol solución para nebulizador/inhaloterapia</option>
+        <option value="Salbutamol sulfato, 2mg./5ml, jarabe">Salbutamol sulfato, 2mg./5ml, jarabe</option>
+        <option value="Sales de Rehidratación Oral">Sales de Rehidratación Oral</option>
+        <option value="Simvastatina 10 mg. tabletas.">Simvastatina 10 mg. tabletas.</option>
+        <option value="Solución Salina normal gotas nasales (Cloruro de Sodio)">Solución Salina normal gotas nasales (Cloruro de Sodio)</option>
+        <option value="Sucralfato 1 gramo tabletas">Sucralfato 1 gramo tabletas</option>
+        <option value="Sulfadiazina 500 mg. tabletas">Sulfadiazina 500 mg. tabletas</option>
+        <option value="Sulfadiazina de plata crema 1%">Sulfadiazina de plata crema 1%</option>
+        <option value="Sulfas oculares con corticoide sol. Oftálmica">Sulfas oculares con corticoide sol. Oftálmica</option>
+        <option value="Sulfasalazina 500 mg. tab">Sulfasalazina 500 mg. tab</option>
+        <option value="Sulpiride 200 mg. tabletas">Sulpiride 200 mg. tabletas</option>
+        <option value="Sulpiride 50 mg. cápsulas">Sulpiride 50 mg. cápsulas</option>
+        <option value="Talidomida tab 100 mg.">Talidomida tab 100 mg.</option>
+        <option value="Tamoxifeno 20 mg. tabletas">Tamoxifeno 20 mg. tabletas</option>
+        <option value="Teofilina jarabe,50mg/5ml">Teofilina jarabe,50mg/5ml</option>
+        <option value="Teofilina tableta 250 - 300 mg">Teofilina tableta 250 - 300 mg</option>
+        <option value="Tiamazol 5 mg tabletas (Metimazol)">Tiamazol 5 mg tabletas (Metimazol)</option>
+        <option value="Tiamina 100 mg tabletas"> Tiamina 100 mg tabletas</option>
+        <option value="Tiamina elixir 20 mg./ 5 ml.">Tiamina elixir 20 mg./ 5 ml.</option>
+        <option value="Timolol 0.5% gotas oftálmicas">Timolol 0.5% gotas oftálmicas</option>
+        <option value="Tiotropio bromuro18mcg./inhalación bucal (cápsulas)">Tiotropio bromuro18mcg./inhalación bucal (cápsulas)</option>
+        <option value="Tizanidina tab 4 mg. (Relajante muscular)">Tizanidina tab 4 mg. (Relajante muscular)</option>
+        <option value="Topiramato 100mg. Tableta">Topiramato 100mg. Tableta</option>
+        <option value="Tobramicina 0,3% con dexametasona 0.1%gotas oftál.">Tobramicina 0,3% con dexametasona 0.1%gotas oftál.</option>
+        <option value="Tobramicina 3mg/ml. (0,3%) gotas oftálmicas">Tobramicina 3mg/ml. (0,3%) gotas oftálmicas</option>
+        <option value="Tramadol 50 mg cápsulas">Tramadol 50 mg cápsulas</option>
+        <option value="Trimetazidina 20 mg. (vastarel)">Trimetazidina 20 mg. (vastarel)</option>
+        <option value="Trimetropin con sulfa 160/800 (tabletas)">Trimetropin con sulfa 160/800 (tabletas)</option>
+        <option value="Trimetropin con sulfa 40/200 (cotrimoxazol susp.)">Trimetropin con sulfa 40/200 (cotrimoxazol susp.)</option>
+        <option value="Trivitaminas gotas">Trivitaminas gotas</option>
+        <option value="Tropicamida 1% gotas">Tropicamida 1% gotas</option>
+        <option value="Valproíco ácido, 250mg/5ml, jarabe o suspensión, frasco">Valproíco ácido, 250mg/5ml, jarabe o suspensión, frasco</option>
+        <option value="Valpróico Ácido (Valproato magnesio), 500mg TABLETAS">Valpróico Ácido (Valproato magnesio), 500mg TABLETAS</option>
+        <option value="Verapamilo 120 mg. tabletas">Verapamilo 120 mg. tabletas</option>
+        <option value="Verapamilo 80 mg. tabletas">Verapamilo 80 mg. tabletas</option>
+        <option value="Warfarina sódica 5mg. tableta">Warfarina sódica 5mg. tableta</option>
+        <option value="Zolpidem 10 mg tabletas">Zolpidem 10 mg tabletas</option>
+        <option value="Etanercept, 25 mg/ml, polvo liofilizado jeringa prellenada, S.C.">Etanercept, 25 mg/ml, polvo liofilizado jeringa prellenada, S.C.</option>
+        <option value="DERIVADOS DE ACIDO HIALURÓNICO DE ALTO PESO MOLECULAR (MAYOR DE 4 MILLONES DE DALTONS), SOLUCIÓN,
+        JERINGA">DERIVADOS DE ACIDO HIALURÓNICO DE ALTO PESO MOLECULAR (MAYOR DE 4 MILLONES DE DALTONS), SOLUCIÓN,
+          JERINGA</option>
+        <option value="PRELLENADA, 2 ML., USO VIA INTRA-ARTICULAR.">PRELLENADA, 2 ML., USO VIA INTRA-ARTICULAR.</option>
+        <option value="(LEUPROLIDE) ACETATO 11.25mg, polvo liofilizado, vial o jeringa prellenada">(LEUPROLIDE) ACETATO 11.25mg, polvo liofilizado, vial o jeringa prellenada</option>
+
+      </select>
+    </div>
+    <br><br>
+
+    <!--seleccionar instalacion-->
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group ">
+          <label for="CHAAM">Complejo H.A.A.M</label>
+          <select [(ngModel)]="medicamentos.CHAAM" name="CHAAM" #CHAAM="ngModel" class="form-control" id="CHAAM">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="JJV">J.J. Vallarino</label>
+          <select [(ngModel)]="medicamentos.JJV" name="JJV" #JJV="ngModel" class="form-control" id="JJV">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="ADGH">A.D.G.H Bethania</label>
+          <select [(ngModel)]="medicamentos.ADGH" name="ADGH" #ADGH="ngModel" class="form-control" id="ADGH">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="MFV">Manuel F.Valdés</label>
+          <select [(ngModel)]="medicamentos.MFV" name="MFV" #MFV="ngModel" class="form-control" id="MFV">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="GG">G.G. Santa Librada</label>
+          <select [(ngModel)]="medicamentos.GG" name="GG" #GG="ngModel" class="form-control" id="GG">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="MMV">M.María Valdés</label>
+          <select [(ngModel)]="medicamentos.MMV" name="MMV" #MMV="ngModel" class="form-control" id="MMV">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-4">
+        <div class="form-group ">
+          <label for="PPR">P. Presidente Remón</label>
+          <select [(ngModel)]="medicamentos.PPR" name="PPR" #PPR="ngModel" class="form-control" id="PPR">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group ">
+          <label for="CNB">C.N.B. San Francisco</label>
+          <select [(ngModel)]="medicamentos.CNB" name="CNB" #CNB="ngModel" class="form-control" id="CNB">
+            <option value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+            <option value="F. cuadro básico">F. cuadro básico</option>
+            <option value="No se dispensa">No se dispensa</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TERMINA select de disponibilidad-->
+
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-10">
+          <label for="exampleTextarea">Detalle</label>
+          <textarea [(ngModel)]="medicamentos.detalle" name="detalle" #detalle="ngModel" class="form-control" id="detalle"
+            rows="3"></textarea>
+        </div>
+
+        <div col="col-2 ">
+          <div>
+            <br>
+            <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong></button>
+          </div>
+          <br>
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">&nbsp;
+              &nbsp; &nbsp;<strong> Ir a listado..</strong> &nbsp; &nbsp;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

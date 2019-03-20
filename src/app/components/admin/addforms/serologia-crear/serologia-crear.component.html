@@ -1,0 +1,74 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en serología </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="serologia.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+          <option value="Inmonoglobulina A (igA)">Inmonoglobulina A (igA)</option>
+          <option value="Inmonoglobulina E (igE)">Inmonoglobulina E (igE)</option>
+          <option value="Inmonoglobulina G (igG">Inmonoglobulina G (igG</option>
+          <option value="Inmonoglobulina M (igM)">Inmonoglobulina M (igM)</option>
+          <option value="MHA-TP">MHA-TP</option>
+          <option value="PCR (Proteina C reactiva)">PCR (Proteina C reactiva)</option>
+          <option value="Pruebas de embarazo">Pruebas de embarazo</option>
+          <option value="Rubeola igG">Rubeola igG</option>
+          <option value="Rubeola igM">Rubeola igM</option>
+          <option value="Seminograma">Seminograma</option>
+          <option value="Toxoplasmosis igG">Toxoplasmosis igG</option>
+          <option value="Toxoplasmosis igM">Toxoplasmosis igM</option>
+          <option value="VDRL (cualitativa)">VDRL (cualitativa)</option>
+          <option value="VDRL (cuantitativa)">VDRL (cuantitativa)</option>
+          <option value="VIH">VIH</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="serologia.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="serologia.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista Serología..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

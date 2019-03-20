@@ -1,0 +1,126 @@
+
+<router-outlet></router-outlet>
+
+<div class="container col-10 title">
+  <div class="row ">
+
+      <div class="col col-md-12 text-center">
+        <blockquote class="card-blockquote">
+          <h3>{{ medicamentos.medicamento }} </h3>
+        </blockquote>
+      </div>
+
+  </div><br>
+
+  <form (ngSubmit)="update()" #forma="ngForm" class="" >
+
+   <!-- seleccionar instalacion -->
+
+    <div class="row">
+        <div class="col">
+            <div class="form-group ">
+                <label for="fecha" class="col-2 col-form-label">Fecha</label>
+                   <input [(ngModel)]="medicamentos.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+                     value="fecha" id="fecha">
+            </div>
+          </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="CHAAM">Complejo H.A.A.M</label>
+          <input [(ngModel)]="medicamentos.CHAAM" name="CHAAM" #CHAAM="ngModel" value="CHAAM" class="form-control" id="CHAAM" type="text">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="JJV">J.J. Vallarino</label>
+          <input (change)="onCambiar(JJV)" [(ngModel)]="medicamentos.JJV" name="JJV" #JJV="ngModel" class="form-control" id="JJV">
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+      <div class="col">
+          <div class="form-group ">
+            <label for="ADGH">A.D.G.H Bethania</label>
+            <input [(ngModel)]="medicamentos.ADGH" name="ADGH" #ADGH="ngModel" class="form-control" id="ADGH">
+          </div>
+        </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="MFV">Manuel F.Valdés</label>
+          <input [(ngModel)]="medicamentos.MFV" name="MFV" #MFV="ngModel" class="form-control" id="MFV">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group ">
+          <label for="GG">G.G. Santa Librada</label>
+          <input [(ngModel)]="medicamentos.GG" name="GG" #GG="ngModel" class="form-control" id="GG">
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+      <div class="col">
+          <div class="form-group ">
+            <label for="MMV">M.María Valdés</label>
+            <input [(ngModel)]="medicamentos.MMV" name="MMV" #MMV="ngModel" class="form-control" id="MMV">
+          </div>
+        </div>
+      <div class="col-4">
+        <div class="form-group ">
+          <label for="PPR">P. Presidente Remón</label>
+          <input [(ngModel)]="medicamentos.PPR" name="PPR" #PPR="ngModel" class="form-control" id="PPR">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group ">
+          <label for="CNB">C.N.B. San Francisco</label>
+          <input [(ngModel)]="medicamentos.CNB" name="CNB" #CNB="ngModel" class="form-control" id="CNB">
+        </div>
+      </div>
+
+    </div>
+
+   <!-- TERMINA select de disponibilidad -->
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-10">
+          <label for="exampleTextarea">Detalle</label>
+          <textarea [(ngModel)]="medicamentos.detalle" name="detalle" #detalle="ngModel" class="form-control" id="detalle"
+            rows="3"></textarea>
+        </div>
+      <br><br>
+
+    <div class="row">
+      <div class="container">
+        <br/>
+        <div class="btn-toolbar" role="toolbar" aria-label="toolbar with button groups" >
+
+              <div class="btn-group mr-2 offset-6" role="group">
+                <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+                  <strong> Ir a listado..</strong> </button>
+              </div>
+              <div class="btn-group mr-2" role="group">
+                <a
+                  [routerLink]="['/medicamento/nuevo']"
+                  class="btn btn-success btn-md">
+                  Agregar nuevo
+                </a>
+              </div>
+
+              <div class="btn-group offset-1" role="group">
+
+                <button
+
+                        type="submit"
+                        (click)="onSubmit()"
+                        class="btn btn-primary btn-md justify-content-lg-end">
+                        <strong>Guardar cambios</strong></button>
+              </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+  </form>
+</div>

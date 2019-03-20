@@ -1,0 +1,108 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en Laboratorio de genética </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="labgenetica.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+        <option value="ADN Fetal">ADN Fetal</option>
+        <option value="Alfa-1-Antitripsina">Alfa-1-Antitripsina</option>
+        <option value="BCR/ABL Mayor Tiempo Real">BCR/ABL Mayor Tiempo Real</option>
+        <option value="BK/JC">BK/JC</option>
+        <option value="BRC/ABL Menor Tiempo Real">BRC/ABL Menor Tiempo Real</option>
+        <option value="CA-125 y HE4">CA-125 y HE4</option>
+        <option value="Calreticulina">Calreticulina</option>
+        <option value="Cariotipo en líquido amniótico">Cariotipo en líquido amniótico</option>
+        <option value="Cariotipo en médula ósea">Cariotipo en médula ósea</option>
+        <option value="Cariotipo en sangre periferica">Cariotipo en sangre periferica</option>
+        <option value="Cetonas en sangre">Cetonas en sangre</option>
+        <option value="CGH">CGH</option>
+        <option value="Clamidia, Mycoplasma, Ureaplasma">Clamidia, Mycoplasma, Ureaplasma</option>
+        <option value="CMV Tiempo Real (Embarazadas)">CMV Tiempo Real (Embarazadas)</option>
+        <option value="Conexina 26">Conexina 26</option>
+        <option value="CYFRA">CYFRA</option>
+        <option value="CYFRA 21-1">CYFRA 21-1</option>
+        <option value="EGFR">EGFR</option>
+        <option value="FISH BCR - ABL">FISH BCR - ABL</option>
+        <option value="Frágil X">Frágil X</option>
+        <option value="Mucopolisacaridos">Mucopolisacaridos</option>
+        <option value="Parvovirus B19 Tiempo Real">Parvovirus B19 Tiempo Real</option>
+        <option value="PCR para SRY">PCR para SRY</option>
+        <option value="PCR para Trombofilia">PCR para Trombofilia</option>
+        <option value="Perfil Tiroideo">Perfil Tiroideo</option>
+        <option value="PML/RARA Tiempo Real">PML/RARA Tiempo Real</option>
+        <option value="PROGRP">PROGRP</option>
+        <option value="Prueba de G-6PDH">Prueba de G-6PDH</option>
+        <option value="Pruebas Molecular de JAK-2">Pruebas Molecular de JAK-2</option>
+        <option value="QF-PCR">QF-PCR</option>
+        <option value="RARA/PML Tiempo Real">RARA/PML Tiempo Real</option>
+        <option value="Tamizaje de Preeclampsia">Tamizaje de Preeclampsia</option>
+        <option value="Tamizaje materno de primer trimestre">Tamizaje materno de primer trimestre</option>
+        <option value="Tamizaje materno de segundo trimestre">Tamizaje materno de segundo trimestre</option>
+        <option value="Tamizaje Neonatal">Tamizaje Neonatal</option>
+        <option value="Toxoplasmosis Tiempo Real">Toxoplasmosis Tiempo Real</option>
+        <option value="ZIKA">ZIKA</option>
+        <option value="FISH Cromosoma 13">FISH Cromosoma 13</option>
+        <option value="FISH Cromosoma 18">FISH Cromosoma 18</option>
+        <option value="FISH Cromosoma 21">FISH Cromosoma 21</option>
+        <option value="FISH Cromosoma X/Y">FISH Cromosoma X/Y</option>
+        <option value="FISH para DI GEORGE">FISH para DI GEORGE</option>
+        <option value="FISH en Líquido Amniótico (Aneuvysion)">FISH en Líquido Amniótico (Aneuvysion)</option>
+        <option value="FISH Mieloma Múltiple">FISH Mieloma Múltiple</option>
+        <option value="FISH PML-RARA">FISH PML-RARA</option>
+        <option value="FISH Prader Willi">FISH Prader Willi</option>
+        <option value="FISH Síndrome Williams">FISH Síndrome Williams</option>
+        <option value="FISH en Sangre Periférica (Aneuvysion) ">FISH en Sangre Periférica (Aneuvysion) </option>
+        <option value="FISH para Retinoblastoma">FISH para Retinoblastoma</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="labgenetica.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="labgenetica.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista lab_genetica..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

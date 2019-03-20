@@ -1,0 +1,130 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en Química </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="quimica.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+          <option value="Acido Urico">Acido Urico</option>
+          <option value="Albumina">Albumina</option>
+          <option value="Albumina de 24 Horas">Albumina de 24 Horas</option>
+          <option value="Alcoholemia">Alcoholemia</option>
+          <option value="Amilasa (Ami)">Amilasa (Ami)</option>
+          <option value="Amonio">Amonio</option>
+          <option value="ASTO (AST)">ASTO (AST)</option>
+          <option value="Bilirubina Directa (BD)">Bilirubina Directa (BD)</option>
+          <option value="Bilirubina Indirecta (BI)">Bilirubina Indirecta (BI)</option>
+          <option value="Bilirubina Total (BT)">Bilirubina Total (BT)</option>
+          <option value="Calcio (Ca)">Calcio (Ca)</option>
+          <option value="CKMB">CKMB</option>
+          <option value="Cloro (Cl)">Cloro (Cl)</option>
+          <option value="Colesterol (COL)">Colesterol (COL)</option>
+          <option value="Colesterol HDL">Colesterol HDL</option>
+          <option value="Colesterol LDL">Colesterol LDL</option>
+          <option value="Colinesterasa">Colinesterasa</option>
+          <option value="Creatinina (CREA, CR)">Creatinina (CREA, CR)</option>
+          <option value="Creatinina Fosfokinasa (CPK)">Creatinina Fosfokinasa (CPK)</option>
+          <option value="Depuración de Creatinina">Depuración de Creatinina</option>
+          <option value="Digoxina">Digoxina</option>
+          <option value="Dióxido de carbono (CO2, Bicarbonato)">Dióxido de carbono (CO2, Bicarbonato)</option>
+          <option value="EPAMIN (Fenitoina)">EPAMIN (Fenitoina)</option>
+          <option value="Factor Rematoideo (FR)">Factor Rematoideo (FR)</option>
+          <option value="Fenobarbital">Fenobarbital</option>
+          <option value="Fosfata Alcalina (ALK, FALC)">Fosfata Alcalina (ALK, FALC)</option>
+          <option value="Fosforo">Fosforo</option>
+          <option value="Fructosamina">Fructosamina</option>
+          <option value="Gases Venenoso">Gases Venenoso</option>
+          <option value="GGT">GGT</option>
+          <option value="Globulina">Globulina</option>
+          <option value="Glucosa">Glucosa</option>
+          <option value="Glucosa Post-Pandrial">Glucosa Post-Pandrial</option>
+          <option value="Hemoglobina Glicosilada (HBA1C)">Hemoglobina Glicosilada (HBA1C)</option>
+          <option value="Hierro">Hierro</option>
+          <option value="Lactato">Lactato</option>
+          <option value="LCR-Cloro">LCR-Cloro</option>
+          <option value="LCR-Glucosa">LCR-Glucosa</option>
+          <option value="LCR-LDH">LCR-LDH</option>
+          <option value="LCR-Proteinas">LCR-Proteinas</option>
+          <option value="LDH">LDH</option>
+          <option value="Litio">Litio</option>
+          <option value="Magnesio">Magnesio</option>
+          <option value="Microalbumina">Microalbumina</option>
+          <option value="Mioglobina">Mioglobina</option>
+          <option value="Nitrogeno de Urea (BUN, NU)">Nitrogeno de Urea (BUN, NU)</option>
+          <option value="Orina Acido Urico">Orina Acido Urico</option>
+          <option value="">Orina Amilasa</option>
+          <option value="Orina Calcio">Orina Calcio</option>
+          <option value="Orina Creatinina - Al Azar">Orina Creatinina - Al Azar</option>
+          <option value="Orina Fosforo">Orina Fosforo</option>
+          <option value="Orina Magnesio">Orina Magnesio</option>
+          <option value="Orina Nitrogeno de Urea">Orina Nitrogeno de Urea</option>
+          <option value="Orina Proteina - Al Azar">Orina Proteina - Al Azar</option>
+          <option value="Orina Sodio">Orina Sodio</option>
+          <option value="Osmolaridad Serica">Osmolaridad Serica</option>
+          <option value="Osmolaridad Urinaria">Osmolaridad Urinaria</option>
+          <option value="Potasio (K+)">Potasio (K+)</option>
+          <option value="Proteinas C Reactivas">Proteinas C Reactivas</option>
+          <option value="Proteinas de 24 Horas">Proteinas de 24 Horas</option>
+          <option value="Proteinas Totales">Proteinas Totales</option>
+          <option value="Salicilemia">Salicilemia</option>
+          <option value="Sodio (Na)">Sodio (Na)</option>
+          <option value="Tegretol (Carbamazepina)">Tegretol (Carbamazepina)</option>
+          <option value="Teofilina">Teofilina</option>
+          <option value="Test de Sulivan">Test de Sulivan</option>
+          <option value="Tolerancia a la Glucosa">Tolerancia a la Glucosa</option>
+          <option value="Transaminasa GLUTAMINOPIRUVIRICA">Transaminasa GLUTAMINOPIRUVIRICA</option>
+          <option value="Transaminasa OXALACETICA">Transaminasa OXALACETICA</option>
+          <option value="transferrina">transferrina</option>
+          <option value="Trigliceridos (TRIG)">Trigliceridos (TRIG)</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="quimica.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="quimica.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista Química..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

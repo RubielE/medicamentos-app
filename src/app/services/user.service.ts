@@ -51,10 +51,10 @@ export class UserService {
         return this._http.put(this.url+'usuario/update-user/'+user_to_update._id, params, { headers: headers}).pipe(map(res => res));
     }
     */
-    pubic isAuthenticated(): boolean {
+  /*  pubic isAuthenticated(): boolean {
       const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
       return new Date().getTime() < expiresAt;
-    }
+    } */
 
 
     getIdentity(){

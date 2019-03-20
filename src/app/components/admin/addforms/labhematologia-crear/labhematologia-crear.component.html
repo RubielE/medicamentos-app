@@ -1,0 +1,107 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en hematología especializada</h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="labhematologia.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+
+          <option value="% de Hb A2">% de Hb A2</option>
+          <option value="% de Hb fetal">% de Hb fetal</option>
+          <option value="% de Hb S">% de Hb S</option>
+          <option value="Agregabilidad">Agregabilidad</option>
+          <option value="Anticardiolipina igG">Anticardiolipina igG</option>
+          <option value="Anticardiolipina IgM">Anticardiolipina IgM</option>
+          <option value="Anticoagulante lúpico">Anticoagulante lúpico</option>
+          <option value="Antiplasmina">Antiplasmina</option>
+          <option value="Antitrombina III (AT-III)">Antitrombina III (AT-III)</option>
+          <option value="C3">C3</option>
+          <option value="C4">C4</option>
+          <option value="Cadenas ligeras libres">Cadenas ligeras libres</option>
+          <option value="Cofactor de Ristoceina">Cofactor de Ristoceina</option>
+          <option value="Dimero D">Dimero D</option>
+          <option value="Electroforesis de proteinas">Electroforesis de proteinas</option>
+          <option value="Estabilidad del coagulo">Estabilidad del coagulo</option>
+          <option value="Factor II (Protombina)">Factor II (Protombina)</option>
+          <option value="Factor V (Proacelerina)">Factor V (Proacelerina)</option>
+          <option value="Factor Von Willebrand (F-vW:Ag)">Factor Von Willebrand (F-vW:Ag)</option>
+          <option value="Fibrinogeno (FIB)">Fibrinogeno (FIB)</option>
+          <option value="Fragilidad osmótica">Fragilidad osmótica</option>
+          <option value="Frotis de sangre periférica">Frotis de sangre periférica</option>
+          <option value="Haptoglobina">Haptoglobina</option>
+          <option value="Hemograma completo">Hemograma completo</option>
+          <option value="Homocisteina">Homocisteina</option>
+          <option value="IgA">IgA</option>
+          <option value="IgG">IgG</option>
+          <option value="IgM">IgM</option>
+          <option value="Inmunofijación">Inmunofijación</option>
+          <option value="Mapeo plaquetario">Mapeo plaquetario</option>
+          <option value="Metrotexate">Metrotexate</option>
+          <option value="Panel de anticuerpo plaquetario">Panel de anticuerpo plaquetario</option>
+          <option value="Panel de glicoproteina plaquetaria">Panel de glicoproteina plaquetaria</option>
+          <option value="Panel de leucemia aguda">Panel de leucemia aguda</option>
+          <option value="Panel de leucemia cronica">Panel de leucemia cronica</option>
+          <option value="Plasminógeno">Plasminógeno</option>
+          <option value="Platelet Funtion Analyzer (PFA-100)">Platelet Funtion Analyzer (PFA-100)</option>
+          <option value="Proteina C">Proteina C</option>
+          <option value="Proteina C Activada (APCR)">Proteina C Activada (APCR)</option>
+          <option value="Proteina S">Proteina S</option>
+          <option value="Recuento de CD34+">Recuento de CD34+</option>
+          <option value="Recuento de plaqueta en frotis">Recuento de plaqueta en frotis</option>
+          <option value="Solubilidad de hemoglobina">Solubilidad de hemoglobina</option>
+          <option value="Tiempo de protombina (TP)">Tiempo de protombina (TP)</option>
+          <option value="Tiempo de tromboplastina parcial (TPT)">Tiempo de tromboplastina parcial (TPT)</option>
+          <option value="tromboelastografia (TEG)">tromboelastografia (TEG)</option>
+
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="labhematologia.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="labhematologia.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista Lab. hematología ..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

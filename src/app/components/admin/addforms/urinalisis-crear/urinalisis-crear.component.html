@@ -1,0 +1,100 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en urinalisis </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="urinalisis.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+          <option value="Bilirrubina (Orina Macroscópico)">Bilirrubina (Orina Macroscópico)</option>
+          <option value="Cetonas (Orina Macroscópico)">Cetonas (Orina Macroscópico)</option>
+          <option value="Eritrocitos (Orina Macroscópico)">Eritrocitos (Orina Macroscópico)</option>
+          <option value="Glucosa (Orina Macroscópico)">Glucosa (Orina Macroscópico)</option>
+          <option value="Gravedad especifica (G.E.) (Orina Macroscópico)">Gravedad especifica (G.E.) (Orina Macroscópico)</option>
+          <option value="Leucocitos (Orina Macroscópico)">Leucocitos (Orina Macroscópico)</option>
+          <option value="Nitrito (Orina Macroscópico)">Nitrito (Orina Macroscópico)</option>
+          <option value="P.H. (Orina Macroscópico)">P.H. (Orina Macroscópico)</option>
+          <option value="Proteínas (Orina Macroscópico)">Proteínas (Orina Macroscópico)</option>
+          <option value="Sangre oculta (S.O.) (Orina Macroscópico)">Sangre oculta (S.O.) (Orina Macroscópico)</option>
+          <option value="Urobilinógeno (Orina Macroscópico)">Urobilinógeno (Orina Macroscópico)</option>
+          <option value="Color (Orina Microscópico)">Color (Orina Microscópico)</option>
+          <option value="Aspecto (Orina Microscópico)">Aspecto (Orina Microscópico)</option>
+          <option value="Mucosidades (Orina Microscópico)">Mucosidades (Orina Microscópico)</option>
+          <option value="Bacterias (Orina Microscópico)">Bacterias (Orina Microscópico)</option>
+          <option value="Levaduras (Orina Microscópico)">Levaduras (Orina Microscópico)</option>
+          <option value="Espermatozoides (Orina Microscópico)">Espermatozoides (Orina Microscópico)</option>
+          <option value="Eritrocitos (Orina Microscópico)">Eritrocitos (Orina Microscópico)</option>
+          <option value="Leucocitos (Orina Microscópico)">Leucocitos (Orina Microscópico)</option>
+          <option value="Células epiteliales (Orina Microscópico)">Células epiteliales (Orina Microscópico)</option>
+          <option value="Cilindros (Orina Microscópico)">Cilindros (Orina Microscópico)</option>
+          <option value="Cristales (Orina Microscópico)">Cristales (Orina Microscópico)</option>
+          <option value="Células redondas (SCR) (Orina Microscópico)">Células redondas (SCR) (Orina Microscópico)</option>
+          <option value="Cilindros (Orina Microscópico)">Cilindros (Orina Microscópico)</option>
+          <option value="BHCG cualitativa/ (embarazo) (Orina Microscópico)">BHCG cualitativa/ (embarazo) (Orina Microscópico)</option>
+          <option value="Proteinas de 24 Horas">Proteinas de 24 Horas</option>
+          <option value="Albumina de 24 Horas">Albumina de 24 Horas</option>
+          <option value="Orina Creatinina - Al Azar">Orina Creatinina - Al Azar</option>
+          <option value="Orina Proteina - Al Azar">Orina Proteina - Al Azar</option>
+          <option value="Orina Acido Urico">Orina Acido Urico</option>
+          <option value="Orina Calcio">Orina Calcio</option>
+          <option value="Orina Sodio">Orina Sodio</option>
+          <option value="Orina Magnesio">Orina Magnesio</option>
+          <option value="Orina Fosforo">Orina Fosforo</option>
+          <option value="Orina Amilasa">Orina Amilasa</option>
+          <option value="Orina Nitrogeno de Urea">Orina Nitrogeno de Urea</option>
+          <option value="Microalbumina">Microalbumina</option>
+          <option value="Cultivo de Orina o Urocultivo">Cultivo de Orina o Urocultivo</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-4">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="urinalisis.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+        </div>
+        <div class="form-group col-4">
+          <label for="disponibilidad">Observación</label>
+          <input [(ngModel)]="urinalisis.observacion" name="observacion" #observacion="ngModel" class="form-control" id="observacion"/>
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="urinalisis.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="date"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista urinalisis..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

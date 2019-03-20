@@ -1,0 +1,87 @@
+<router-outlet></router-outlet>
+<div class="container col-10 title">
+    <div class="row">
+        <div class="col col-md-12  text-center">
+          <blockquote class="card-blockquote">
+            <h2>Crear nuevo reactivo en inmunología </h2>
+          </blockquote>
+      </div>
+    </div><br>
+
+  <form (ngSubmit)="guardar()" #forma="ngForm">
+
+    <div class="form-group">
+      <label for="nombre">Seleccione reactivo</label>
+      <select [(ngModel)]="inmunologia.reactivo" value="reactivo" name="reactivo" #reactivo="ngModel" class="form-control" id="reactivo">
+
+          <option value="C3">C3</option>
+          <option value="C4">C4</option>
+          <option value="IgG">IgG</option>
+          <option value="IgA">IgA</option>
+          <option value="IgM">IgM</option>
+          <option value="ANA/Hep-2 (Anticuerpos antinucleares)">ANA/Hep-2 (Anticuerpos antinucleares)</option>
+          <option value="ANA ó ACAN">ANA ó ACAN</option>
+          <option value="ENA">ENA</option>
+          <option value="Anti Smith">Anti Smith</option>
+          <option value="Anti RNP">Anti RNP</option>
+          <option value="Anti SS-A (Ro)">Anti SS-A (Ro)</option>
+          <option value="Anti SS-B (La)">Anti SS-B (La)</option>
+          <option value="Anti SCL 70">Anti SCL 70</option>
+          <option value="Anti Jo-1">Anti Jo-1</option>
+          <option value="Anti Centrómero">Anti Centrómero</option>
+          <option value="Anti histonas">Anti histonas</option>
+          <option value="Anti DNA">Anti DNA</option>
+          <option value="Anti cardiolipinas IgM/IgG">Anti cardiolipinas IgM/IgG</option>
+          <option value="Anti B2GP1-IgM (ß2 glicoproteínas)">Anti B2GP1-IgM (ß2 glicoproteínas)</option>
+          <option value="Anti B2GP1-IgG (ß2 glicoproteínas)">Anti B2GP1-IgG (ß2 glicoproteínas)</option>
+          <option value="ANCA-MPO">ANCA-MPO</option>
+          <option value="ANCA-PR3">ANCA-PR3</option>
+          <option value="Anti-Mitocondrial">Anti-Mitocondrial</option>
+          <option value="Anti-Musculo liso">Anti-Musculo liso</option>
+          <option value="Anti células parietales">Anti células parietales</option>
+          <option value="Anti tTH-IgA (transglutaminasa tisular)">Anti tTH-IgA (transglutaminasa tisular)</option>
+          <option value="Anti-tTH-IgG (transglutaminasa tisular)">Anti-tTH-IgG (transglutaminasa tisular)</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="row">
+
+        <div class="form-group col-8">
+          <label for="disponibilidad">Disponibilidad</label>
+          <input [(ngModel)]="inmunologia.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
+
+        </div>
+        <div class="form-group col-4">
+          <label for="fecha" class="col-2 col-form-label">Fecha</label>
+          <input [(ngModel)]="inmunologia.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="text"
+            value="" id="fecha">
+        </div>
+
+
+    </div>
+    <br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2 offset-7">
+          <div>
+              <button [disabled]="!forma.valid"
+                    type="submit"
+                    class="btn btn-success btn-md justify-content-lg-end">
+                    <strong>Guardar cambios</strong>
+              </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div>
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a lista inmunología..</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
