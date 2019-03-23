@@ -62,6 +62,21 @@ import { LabhematologiaEditarComponent } from './components/admin/editforms/labh
 import { NatEditarComponent } from './components/admin/editforms/nat-editar/nat-editar.component';
 import { UrinalisisEditarComponent } from './components/admin/editforms/urinalisis-editar/urinalisis-editar.component';
 import { MicrobiologiaEditarComponent } from './components/admin/editforms/microbiologia-editar/microbiologia-editar.component';
+import { AdministrarhomeComponent } from './components/admin/administrarhome/administrarhome.component';
+import { UrinalisisListadoComponent } from './components/client/urinalisis-listado/urinalisis-listado.component';
+import { MicrobiologiaListadoComponent } from './components/client/microbiologia-listado/microbiologia-listado.component';
+import { HematologiaListadoadminComponent } from './components/admin/listadoadmin/hematologia-listadoadmin/hematologia-listadoadmin.component';
+import { InmunoquimicaListadoadminComponent } from './components/admin/listadoadmin/inmunoquimica-listadoadmin/inmunoquimica-listadoadmin.component';
+import { QuimicaListadoadminComponent } from './components/admin/listadoadmin/quimica-listadoadmin/quimica-listadoadmin.component';
+import { SerologiaListadoadminComponent } from './components/admin/listadoadmin/serologia-listadoadmin/serologia-listadoadmin.component';
+import { ParasitologiaListadoadminComponent } from './components/admin/listadoadmin/parasitologia-listadoadmin/parasitologia-listadoadmin.component';
+import { UrinalisisListadoadminComponent } from './components/admin/listadoadmin/urinalisis-listadoadmin/urinalisis-listadoadmin.component';
+import { MicrobiologiaListadoadminComponent } from './components/admin/listadoadmin/microbiologia-listadoadmin/microbiologia-listadoadmin.component';
+import { InmunologiaListadoadminComponent } from './components/admin/listadoadmin/inmunologia-listadoadmin/inmunologia-listadoadmin.component';
+import { LabgeneticaListadoadminComponent } from './components/admin/listadoadmin/labgenetica-listadoadmin/labgenetica-listadoadmin.component';
+import { LabhematologiaListadoadminComponent } from './components/admin/listadoadmin/labhematologia-listadoadmin/labhematologia-listadoadmin.component';
+import { NatListadoadminComponent } from './components/admin/listadoadmin/nat-listadoadmin/nat-listadoadmin.component';
+
 
 
 
@@ -115,6 +130,21 @@ import { MicrobiologiaEditarComponent } from './components/admin/editforms/micro
     NatEditarComponent,
     UrinalisisEditarComponent,
     MicrobiologiaEditarComponent,
+    AdministrarhomeComponent,
+    UrinalisisListadoComponent,
+    MicrobiologiaListadoComponent,
+    HematologiaListadoadminComponent,
+    InmunoquimicaListadoadminComponent,
+    QuimicaListadoadminComponent,
+    SerologiaListadoadminComponent,
+    ParasitologiaListadoadminComponent,
+    UrinalisisListadoadminComponent,
+    MicrobiologiaListadoadminComponent,
+    InmunologiaListadoadminComponent,
+    LabgeneticaListadoadminComponent,
+    LabhematologiaListadoadminComponent,
+    NatListadoadminComponent,
+    
 
   //  RegisterComponent
   ],

@@ -1,61 +1,71 @@
 <router-outlet></router-outlet>
 
-
 <div class="row">
     <div  class=" col-2 navigation">
 
       <h1 class="head-title title">{{title}}</h1>
-
+      
       <nav id="navigation" >
             <a [routerLink]="['/medicamentos']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Lista Agotados
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/listado-oficial']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                Inmunoquímica
+                Listado oficial
             </a>
-            <a [routerLink]="['']">
-              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                Química
-            </a>
-            <a [routerLink]="['']">
-              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                Perfiles
-            </a>
-            <a [routerLink]="['']">
+            
+            <a [routerLink]="['/hematologia-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Hematología
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/inmunoquimica-listado']">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                Inmunoquímica
+            </a>
+            <a [routerLink]="['/quimica-listado']">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                Química
+            </a>
+            <a [routerLink]="['/perfiles']">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                Perfiles
+            </a>
+            
+            <a [routerLink]="['/serologia-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Serología
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/parasitologia-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Parasitología
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/urinalisis-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Urinalisis
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/microbiologia-listado']">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                Microbiología
+            </a>
+            <a [routerLink]="['/inmunologia-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Inmunología
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/labgenetica-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Lab. Genética
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/labhematologia-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 Lab. Hematología
             </a>
-            <a [routerLink]="['']">
+            <a [routerLink]="['/nat-listado']">
               <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                 NAT
             </a>
-            
+            <button [routerLink]="['/administrarhome']" type="button" class="btn btn-outline-primary">Administrar</button>
+
       </nav>
     </div>
 
@@ -64,9 +74,8 @@
 
       <div class="">
           <img class="logo" src="assets/img/Logo-css.png" >
-            
+
           <h2 class="text-center others"><strong>Bienvenido..</strong></h2>
       </div>
       </div>
 </div>
-

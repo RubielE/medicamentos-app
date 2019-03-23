@@ -5,8 +5,7 @@ import { Observable, of, throwError  } from 'rxjs';
 import { Medicamentos } from "../models/medicamentos";
 import { headersToString } from 'selenium-webdriver/http';
 import 'rxjs/Rx';
-
-
+import { GLOBAL } from './global';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +13,13 @@ import 'rxjs/Rx';
 export class MedicamentosService {
 
 private medicamentos:Medicamentos[]= [];
-private uri: string;
+private url: string;
 
 // mdb_url = 'mongodb://a-rubiel:enrique24@ds157735.mlab.com:57735/medicamentos';
  //mdb_url = 'mongodb://127.0.0.1:27017/medicamentos';
 
   constructor(private httpClient: HttpClient) {
-    this.uri = 'https://farmacia01.herokuapp.com/medicamentos/';
+    this.url = GLOBAL.url;
   }
 
   // metodo obtener lista
@@ -29,7 +28,7 @@ private uri: string;
       "Content-Type": "application/json"
     });
    // mongodb://a-rubiel:enrique24@ds157735.mlab.com:57735/medicamentos'
-   return this.httpClient.get("https://farmacia01.herokuapp.com/medicamentos/listar", {headers:header});
+   return this.httpClient.get(this.url+'/medicamentos/listar', {headers:header});
    //return this.httpClient.get("http://10.8.73.235:3300/medicamentos/listar", {headers:header});
   }
 
@@ -39,7 +38,7 @@ private uri: string;
     let headers = new HttpHeaders({
         'Content-Type': 'application/json'
     });
-    return this.httpClient.post("https://farmacia01.herokuapp.com/medicamentos/crear", json, {headers:headers})
+    return this.httpClient.post(this.url+'/medicamentos/crear', json, {headers:headers})
    // return this.httpClient.post("http://10.8.73.235:3300/medicamentos/crear", json, { headers: headers })
       .pipe(
             map(res => {
@@ -55,7 +54,7 @@ private uri: string;
       'Content-Type': 'application/json',
      // 'Authorization': ""
     });
-    return this.httpClient.put("https://farmacia01.herokuapp.com/medicamentos/editar/"+ id, params, {headers: header})
+    return this.httpClient.put(this.url+'/medicamentos/editar/'+ id, params, {headers: header})
     //return this.httpClient.put("http://10.8.73.235:3300/medicamentos/editar" + id, json, {headers: Header})
     .map(res => res);
   }
@@ -63,7 +62,7 @@ private uri: string;
 //get del id de registro
 getMedicamento(id: string){
   var data = [];
-    return this.httpClient.post("https://farmacia01.herokuapp.com/medicamentos/filtrar/"+ id, data).map(res => res);
+    return this.httpClient.post(this.url+'/medicamentos/filtrar/'+ id, data).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/medicamentos/filtrar/"+ id, {headers: Header});
 }
 
@@ -74,7 +73,7 @@ eliminarMedicamento(id) {
       'Content-Type': 'application/json',
       'Authorization': ""
     }) 
-    return this.httpClient.delete("https://farmacia01.herokuapp.com/medicamentos/eliminar/" + id  );
+    return this.httpClient.delete(this.url+'/medicamentos/eliminar/' + id  );
   //return this.httpClient.delete("http://10.8.73.235:3300/medicamentos/eliminar/" + id  );
 
 }
