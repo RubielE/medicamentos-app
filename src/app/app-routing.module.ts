@@ -15,7 +15,7 @@ import { ComercialGenericoComponent } from './components/client/comercial-generi
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { EditarMedicamentoComponent } from './components/admin/editforms/editar-medicamento/editar-medicamento.component';
 import { MedicamentosListadoComponent} from './components/client/medicamentos-listado/medicamentos-listado.component';
-import { AuthGuardService } from './services/auth-guard.service'
+
 // imports components of complejo
 import { HematologiaListadoComponent } from './components/client/hematologia-listado/hematologia-listado.component';
 import { InmunoquimicaListadoComponent } from './components/client/inmunoquimica-listado/inmunoquimica-listado.component';
@@ -63,6 +63,7 @@ import { InmunologiaListadoadminComponent } from './components/admin/listadoadmi
 import { LabgeneticaListadoadminComponent } from './components/admin/listadoadmin/labgenetica-listadoadmin/labgenetica-listadoadmin.component';
 import { LabhematologiaListadoadminComponent } from './components/admin/listadoadmin/labhematologia-listadoadmin/labhematologia-listadoadmin.component';
 import { NatListadoadminComponent } from './components/admin/listadoadmin/nat-listadoadmin/nat-listadoadmin.component';
+import { AuthGuard } from './guards/auth.guard'
 
 
 
@@ -77,9 +78,9 @@ const routes: Routes = [
   { path: 'user-edit', component: UserEditComponent },
 //paths of components
 { path: 'home', component: HomeComponent },
-  {path: 'administrarhome', component: AdministrarhomeComponent},
-  { path: 'medicamentos', component: MedicamentosComponent, canActivate: [AuthGuardService] },
-  { path: 'medicamento/nuevo', component: MedicamentoComponent },
+  {path: 'administrarhome', component: AdministrarhomeComponent },
+  { path: 'medicamentos', component: MedicamentosComponent },
+  { path: 'medicamento/nuevo', component: MedicamentoComponent},
   { path: 'detalle', component: DetalleComponent },
   { path: 'lista-oficial', component: ListaOficialComponent },
   { path: 'comercial-generico', component: ComercialGenericoComponent },
@@ -114,7 +115,7 @@ const routes: Routes = [
     { path: 'labhematologia-listadoadmin', component: LabhematologiaListadoadminComponent },
     { path: 'nat-listadoadmin', component: NatListadoadminComponent },
     { path: 'urinalisis-listadoadmin', component: UrinalisisListadoadminComponent },
-    { path: 'microbiologia-listadoadmin', component: MicrobiologiaListadoadminComponent },
+    { path: 'microbiologia-listadoadmin', component: MicrobiologiaListadoadminComponent},
 
     //paths nuevos de add admin
     { path: 'hematologia-crear', component: HematologiaCrearComponent },
@@ -131,17 +132,17 @@ const routes: Routes = [
 
 
     //paths nuevos de edit admin
-    { path: 'hematologia-editar', component: HematologiaEditarComponent },
-    { path: 'inmunoquimica-editar', component: InmunoquimicaEditarComponent},
-    { path: 'quimica-editar', component: QuimicaEditarComponent},
-    { path: 'serologia-editar', component: SerologiaEditarComponent},
-    { path: 'parasitologia-editar', component: ParasitologiaEditarComponent},
-    { path: 'inmunologia-editar', component: InmunologiaEditarComponent},
-    { path: 'labgenetica-editar', component: LabgeneticaEditarComponent},
-    { path: 'labhematologia-editar', component: LabhematologiaEditarComponent},
-    { path: 'nat-editar', component: NatEditarComponent},
-    { path: 'urinalisis-editar', component: UrinalisisEditarComponent},
-    { path: 'microbiologia-editar', component: MicrobiologiaEditarComponent},
+    { path: 'hematologia-editar/:_id', component: HematologiaEditarComponent },
+    { path: 'inmunoquimica-editar/:_id', component: InmunoquimicaEditarComponent},
+    { path: 'quimica-editar/:_id', component: QuimicaEditarComponent},
+    { path: 'serologia-editar/:_id', component: SerologiaEditarComponent},
+    { path: 'parasitologia-editar/:_id', component: ParasitologiaEditarComponent},
+    { path: 'inmunologia-editar/:_id', component: InmunologiaEditarComponent},
+    { path: 'labgenetica-editar/:_id', component: LabgeneticaEditarComponent},
+    { path: 'labhematologia-editar/:_id', component: LabhematologiaEditarComponent},
+    { path: 'nat-editar/:_id', component: NatEditarComponent},
+    { path: 'urinalisis-editar/:_id', component: UrinalisisEditarComponent},
+    { path: 'microbiologia-editar/:_id', component: MicrobiologiaEditarComponent},
 
 
 

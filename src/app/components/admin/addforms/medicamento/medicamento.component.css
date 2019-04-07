@@ -1,7 +1,10 @@
+
+
 .title{
-    background: #4A2AFD;
+    background: #837470;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px;
-    text-align: center;
     color: white;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
 }

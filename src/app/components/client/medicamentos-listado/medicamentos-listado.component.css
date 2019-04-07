@@ -1,0 +1,13 @@
+.title{
+    background: #0080FF;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.button {
+    padding: 5px 10px;
+    }

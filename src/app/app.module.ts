@@ -28,7 +28,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 //services
 import { MedicamentosService } from './services/medicamentos.service';
 import { UserService } from './services/user.service';
-import { AuthGuardService } from './services/auth-guard.service';
+
 //components complejo
 import { HematologiaListadoComponent } from './components/client/hematologia-listado/hematologia-listado.component';
 import { InmunoquimicaListadoComponent } from './components/client/inmunoquimica-listado/inmunoquimica-listado.component';
@@ -76,8 +76,17 @@ import { InmunologiaListadoadminComponent } from './components/admin/listadoadmi
 import { LabgeneticaListadoadminComponent } from './components/admin/listadoadmin/labgenetica-listadoadmin/labgenetica-listadoadmin.component';
 import { LabhematologiaListadoadminComponent } from './components/admin/listadoadmin/labhematologia-listadoadmin/labhematologia-listadoadmin.component';
 import { NatListadoadminComponent } from './components/admin/listadoadmin/nat-listadoadmin/nat-listadoadmin.component';
-
-
+import { FilterhematPipe } from './pipes/filterhemat.pipe';
+import { FilterinmuquimicaPipe } from './pipes/filterinmuquimica.pipe';
+import { FilterquimicaPipe } from './pipes/filterquimica.pipe';
+import { FilterserologiaPipe } from './pipes/filterserologia.pipe';
+import { FilterparasitologiaPipe } from './pipes/filterparasitologia.pipe';
+import { FilterinmunoloPipe } from './pipes/filterinmunolo.pipe';
+import { FilterlabgenetPipe } from './pipes/filterlabgenet.pipe';
+import { FilterlabhematPipe } from './pipes/filterlabhemat.pipe';
+import { FilternatPipe } from './pipes/filternat.pipe';
+import { FilterurinalPipe } from './pipes/filterurinal.pipe';
+import { FiltermicrobioPipe } from './pipes/filtermicrobio.pipe';
 
 
 
@@ -144,6 +153,18 @@ import { NatListadoadminComponent } from './components/admin/listadoadmin/nat-li
     LabgeneticaListadoadminComponent,
     LabhematologiaListadoadminComponent,
     NatListadoadminComponent,
+    FilterhematPipe,
+    FilterinmuquimicaPipe,
+    FilterquimicaPipe,
+    FilterserologiaPipe,
+    FilterparasitologiaPipe,
+    FilterinmunoloPipe,
+    FilterlabgenetPipe,
+    FilterlabhematPipe,
+    FilternatPipe,
+    FilterurinalPipe,
+    FiltermicrobioPipe
+   
     
 
   //  RegisterComponent
@@ -159,8 +180,7 @@ import { NatListadoadminComponent } from './components/admin/listadoadmin/nat-li
    // UserService
   ],
   providers: [MedicamentosService,
-              UserService,
-              AuthGuardService],
+              UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

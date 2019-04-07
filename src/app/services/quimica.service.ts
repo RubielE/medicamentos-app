@@ -59,9 +59,14 @@ export class QuimicaService {
   }
 
 //get del id de registro
-getReactivo(id: string){
-  var data = [];
-    return this.httpClient.post('/quimica/filtrar/'+ id, data).map(res => res);
+getReactivo(id: any){
+  let json = JSON.stringify(id);
+  let data = json;
+  let header = new HttpHeaders ({
+    'Content-Type': 'application/json'
+   // 'Authorization': ""
+  });
+    return this.httpClient.post(this.url+'/quimica/filtrar', data, {headers: header}).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/quimica/filtrar/"+ id, {headers: Header});
 }
 
@@ -72,7 +77,7 @@ eliminarReactivo(id) {
       'Content-Type': 'application/json',
       'Authorization': ""
     })
-    return this.httpClient.delete('/quimica/eliminar/' + id  );
+    return this.httpClient.delete(this.url+'/quimica/eliminar/' + id  );
   //return this.httpClient.delete("http://10.8.73.235:3300/quimica/eliminar/" + id  );
 
 }

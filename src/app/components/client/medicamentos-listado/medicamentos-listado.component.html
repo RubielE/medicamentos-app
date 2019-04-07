@@ -1,125 +1,36 @@
-
-<!--navbar-->
-<nav class="navbar navbar-toggleable-lg navbar-inverse bg-primary" >
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand">
-      <img src="assets/img/logoweb.gif" width="65px;" height="45px;" alt="logo">
-    </a> 
-      <button class="display-5 text-center title" [routerLink]="['/home']" ><strong>Inicio</strong></button>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/medicamentos']" ><strong>Lista agotados</strong></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/lista-oficial']"><strong>Listado oficial</strong></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " [routerLink]="['/comercial-generico']"><strong>Nombre comercial/ genérico</strong></a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="filterItem" [(ngModel)]="filterItem">  
-    <!--  <button class="btn btn-outline my-2 my-sm-0" type="submit">Buscar</button> -->
-      <button class="btn btn-outline my-2 my-sm-0" type="button">Salir</button> 
-    </form>
-  </div>
-</nav>
-
-
-<!--fin de navbar-->
-
-<!--tabla de fechas de modificación-->
-<!--
-<div class="container-fluid alt">
-  <table class=" display table table-striped table-hover " style="width:100%">
-    <thead class="thead-inverse">
-      <tr>
-        <th col-2>Fecha
-          <hr>
-          <h6>Tel. farmacia</h6>
-          <h6>horario</h6>
-        </th>
-        <th class="text-center">CHAAM-fecha
-          <hr>
-          <h6>503-6103</h6>
-          <h6>7:00-5:00</h6>
-        </th>
-        <th class="text-center">JJV-fecha
-          <hr>
-          <h6>503-9410</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th class="text-center">ADGH-fecha
-          <hr>
-          <h6>503-1708</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th class="text-center"> MFV-fecha
-          <hr>
-          <h6>503-1517</h6>
-          <h6>7:00-9:00</h6>
-        </th>
-        <th class="text-center">GG-fecha
-          <hr>
-          <h6>231-0080</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th class="text-center">MMV-fecha
-          <hr>
-          <h6>503-1267</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th class="text-center">PPR-fecha
-          <hr>
-          <h6>503-3334</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th class="text-center">CNB-fecha
-          <hr>
-          <h6>503-1121</h6>
-          <h6>7:00-7:00</h6>
-        </th>
-        <th 
-            class="text-right">
-            
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr >
-        <td>{{item.CHAAM_fecha}}</td>
-        <td>{{item.JJV_fecha}}</td>
-        <td>{{item.ADGH_fecha}}</td>
-        <td>{{item.MFV_fecha}}</td>
-        <td>{{item.GG_fecha}}</td>
-        <td>{{item.MMV_fecha}}</td>
-        <td>{{item.PPR_fecha}}</td>
-        <td>{{item.CNB_fecha}}</td> -->
-
-       <!--
-        <td >  *ngIf="identity.role == 'ROLE_ADMIN' "
-        
-                <a class="btn btn-primary btn-sm right w" type="button"
-                        
-                        [routerLink]="['/editar-medicamento', item._id]">
-                        Editar fecha
-                </a>   
-        </td> 
-      </tr>    
-
-    </tbody>
-  </table> 
-</div>  -->
+<!--navbar -->
+<nav class="navbar navigation navbar-toggleable-lg navbar-inverse bg-primary" >
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand">
+        <img src="assets/img/logoweb.gif" width="65px;" height="40px;" alt="logo">
+      </a>
+      <a class="list-group-item title button" [routerLink]="['/home']"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; inicio</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/lista-oficial']"><strong>Listado oficial</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/comercial-generico']"><strong>Nombre comercial/ genérico</strong></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="filterItem" [(ngModel)]="filterItem">
+      
+        <button class="btn btn-outline my-2 my-sm-0 button" type="button" [routerLink]="['/home']">Salir</button>
+      </form>
+    </div>
+  </nav>  
+   
+  
 
 <!--tabla de medicamentos-->
 <div class="container-fluid">
   <table class=" display table table-striped table-hover " style="width:100%">
     <thead class="thead-inverse">
       <tr>
-    <!--    <th >Fecha</th>  -->
+        <th >Fecha
+        </th>  
         <th >Medicamento
         </th>
         <th class="text-center">CHAAM  
@@ -146,7 +57,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of data | filter: filterItem ">
-      <!--  <th scope="row">{{item.fecha | date}}</th>  -->
+      
+        <td>{{item.fecha | date }}</td>
         <td>{{item.medicamento}}</td>
         <td>{{item.CHAAM}}</td>
         <td>{{item.JJV}}</td>

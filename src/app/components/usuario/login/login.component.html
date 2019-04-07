@@ -1,42 +1,4 @@
 <router-outlet></router-outlet>
-<div class="clearfix"></div>
-
-<div *ngIf="identity" class="central col-lg-1 navigation">
-
-  <h1 class="head-title">{{title}}</h1>
-
-  <nav id="navigation" >
-        <a href="">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            Buscar
-        </a>
-        <a [routerLink]="['/medicamentos']">
-          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            Lista Agotados
-        </a>
-        <a [routerLink]="['/lista-oficial']">
-          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            Lista oficial
-        </a>
-        <a [routerLink]="['/comercial-generico']">
-          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            Nombres Com/Gen
-        </a>
-        
-  </nav>
-  <nav id="user_logged">
-      <span id="identity_name">
-        {{identity.name}}
-      </span>
-      <span (clic)="logut()" class="btn-logout">
-            Salir
-      </span>
-
-  </nav>
-siguiente linea es una prueba
-  <p>Has iniciado sesión en la aplicación</p>
-  
-</div> 
 
 <div class="col-lg-11" *ngIf="!identity">
     <div class="col-lg-6">
@@ -93,8 +55,8 @@ siguiente linea es una prueba
     <div class="form-group row">
       <div class=" col-12" >
           <button 
-                  [routerLink]="['/register']" 
-                  class="btn btn-success btn-block">Registrarse
+                  [routerLink]="['/home']" 
+                  class="btn btn-success btn-block">Ir al Inicio
           </button>
         </div>
     </div>

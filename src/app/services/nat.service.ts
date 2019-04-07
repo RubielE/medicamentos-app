@@ -17,7 +17,7 @@ export class NatService {
   // mdb_url = 'mongodb://a-rubiel:enrique24@ds157735.mlab.com:57735/medicamentos';
    //mdb_url = 'mongodb://127.0.0.1:27017/medicamentos';
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient) {
     this.url = GLOBAL.url;
   }
 
@@ -59,9 +59,14 @@ export class NatService {
   }
 
 //get del id de registro
-getReactivo(id: string){
-  var data = [];
-    return this.httpClient.post('/nat/filtrar/'+ id, data).map(res => res);
+getReactivo(id: any){
+  let json = JSON.stringify(id);
+  let data = json;
+  let header = new HttpHeaders ({
+    'Content-Type': 'application/json'
+   // 'Authorization': ""
+  });
+    return this.httpClient.post(this.url+'/nat/filtrar', data, {headers: header}).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/nat/filtrar/"+ id, {headers: Header});
 }
 
@@ -72,7 +77,7 @@ eliminarReactivo(id) {
       'Content-Type': 'application/json',
       'Authorization': ""
     })
-    return this.httpClient.delete('/nat/eliminar/' + id  );
+    return this.httpClient.delete(this.url+'/nat/eliminar/' + id  );
   //return this.httpClient.delete("http://10.8.73.235:3300/nat/eliminar/" + id  );
 
 }

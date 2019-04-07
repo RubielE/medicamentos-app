@@ -1,34 +1,25 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary" >
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand">
-      <img src="assets/img/logoweb.gif" width="55" height="50" alt="">
-    </a>
-    <button class="display-5 text-center title" [routerLink]="['/home']" ><strong>Inicio</strong></button>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/medicamentos']" ><strong>Lista agotados</strong></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/lista-oficial']"><strong>Listado oficial</strong></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " [routerLink]="['/comercial-generico']"><strong>Nombre comercial/ genérico</strong></a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-     <!-- <input class="form-control mr-sm-2" type="text" placeholder="Buscar" (keyup.enter)="buscarMedicamento(buscarTexto.value)" #buscarTexto> -->
-        <button
-              class="btn btn-outline my-2 my-sm-0" 
-              type="button">Salir
-        </button>  
-    <!--  <a (clic)="logut()" class="btn-logout">
-        <span class="btn btn-outline-primary my-2 my-sm-0" aria-hiden="true"></span>
-          Buscar
-      </a> -->
-    </form>
-  </div>
-</nav>
-
+<!--navbar -->
+<nav class="navbar navigation navbar-toggleable-lg navbar-inverse bg-primary" >
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand">
+        <img src="assets/img/logoweb.gif" width="65px;" height="40px;" alt="logo">
+      </a>
+      <a class="list-group-item title button" [routerLink]="['/home']"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; inicio</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+       
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/lista-oficial']"><strong>Listado oficial</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/comercial-generico']"><strong>Nombre comercial/ genérico</strong></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="filterItem" [(ngModel)]="filterItem">
+      
+        <button class="btn btn-outline my-2 my-sm-0 button" type="button">Salir</button>
+      </form>
+    </div>
+  </nav>  
+  

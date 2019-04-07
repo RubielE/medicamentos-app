@@ -60,9 +60,10 @@ this.url = GLOBAL.url;
   }
 
 //get del id de registro
-getReactivo(id: string){
-  var data = [];
-    return this.httpClient.post('/hematologia/filtrar/'+ id, data).map(res => res);
+getReactivo(id: any){
+  let json = JSON.stringify(id);
+  let data = json;
+    return this.httpClient.post(this.url+'/hematologia/filtrar', data).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/hematologia/filtrar/"+ id, {headers: Header});
 }
 
@@ -73,7 +74,7 @@ eliminarReactivo(id) {
       'Content-Type': 'application/json',
       'Authorization': ""
     })
-    return this.httpClient.delete('/hematologia/eliminar/' + id  );
+    return this.httpClient.delete(this.url+'/hematologia/eliminar/' + id  );
   //return this.httpClient.delete("http://10.8.73.235:3300/hematologia/eliminar/" + id  );
 
 }

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   public errorMessage;
 
   constructor(
-    private _userService:UserService
+    private _userService:UserService, private router: Router
   ){
     this.user = new Usuario( '', '', '', 'rol', '');
   }
@@ -84,7 +84,7 @@ export class LoginComponent implements OnInit {
           error => {
             var errorMessage = <any>error;
              if(errorMessage != null){
-                var body = JSON.parse(error._body);
+                var body =error;
                 this.errorMessage = body.Message;
                 console.log(error);
               }

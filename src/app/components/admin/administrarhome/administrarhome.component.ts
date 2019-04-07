@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'app-administrarhome',
@@ -8,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class AdministrarhomeComponent implements OnInit {
   public title = 'Administrar';
 
-  constructor() { }
+  constructor(private userService: UserService) { }
+  public isLogged: boolean = false;
 
   ngOnInit() {
+    this.onCheckUser();
+  }
+
+  onLogout(): void{
+    this.userService.logout();
+  }
+
+  onCheckUser(): void {
+    if (this.userService.getIdentity() == null){
+      this.isLogged = false;
+    } else {
+      this.isLogged = true;
+    }
   }
 
 }

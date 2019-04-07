@@ -58,9 +58,14 @@ export class LabhematologiaService {
   }
 
 //get del id de registro
-getReactivo(id: string){
-  var data = [];
-    return this.httpClient.post(this.url+'/labhematologia/filtrar/'+ id, data).map(res => res);
+getReactivo(id: any){
+  let json = JSON.stringify(id);
+  let data = json;
+  let header = new HttpHeaders ({
+    'Content-Type': 'application/json'
+   // 'Authorization': ""
+  });
+    return this.httpClient.post(this.url+'/labhematologia/filtrar', data, {headers: header}).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/labhematologia/filtrar/"+ id, {headers: Header});
 }
 

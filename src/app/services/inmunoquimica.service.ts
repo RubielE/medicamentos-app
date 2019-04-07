@@ -48,7 +48,7 @@ export class InmunoquimicaService {
     let json = JSON.stringify(reactivo);
     let params = json;
     let header = new HttpHeaders ({
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
      // 'Authorization': ""
     });
     return this.httpClient.put(this.url+'/inmunoquimica/editar/'+ id, params, {headers: header})
@@ -57,9 +57,14 @@ export class InmunoquimicaService {
   }
 
 //get del id de registro
-getReactivo(id: string){
-  var data = [];
-    return this.httpClient.post(this.url+'/inmunoquimica/filtrar/'+ id, data).map(res => res);
+getReactivo(id: any){
+  let json = JSON.stringify(id);
+  let data = json;
+  let header = new HttpHeaders ({
+    'Content-Type': 'application/json'
+   // 'Authorization': ""
+  });
+    return this.httpClient.post(this.url+'/inmunoquimica/filtrar', data, {headers: header}).map(res => res);
  // return this.httpClient.get("http://10.8.73.235:3300/inmunoquimica/filtrar/"+ id, {headers: Header});
 }
 

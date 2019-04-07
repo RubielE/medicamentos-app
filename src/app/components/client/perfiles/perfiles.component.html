@@ -1,3 +1,244 @@
-<p>
-  perfiles works!
-</p>
+<div class="">
+    <nav class="navbar  navbar-toggleable-lg navbar-inverse bg-primary title2" >
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand">
+            <img src="assets/img/logoweb.gif" width="65px;" height="40px;" alt="logo">
+          </a>
+          <a class="list-group-item title button" [routerLink]="['/home']"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; inicio</a>
+          <form class="form-inline my-2 my-lg-0 offset-7">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="filterItem" [(ngModel)]="filterItem">
+          </form>
+          <button type="button" class="title btn btn-outline-success" > Perfiles</button>
+        </div>
+      </nav> 
+
+<div class="card-columns body">
+    <div class="card card-primary" style="width: 18rem;">
+        <div class="card-block card-inverse">
+          <h4 class="card-title text-center">Perfil renal</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cretinina (CREA, CR)
+          </li>
+          <li class="list-group-item">Nitrógeno de urea (BUN, NU)
+          </li>
+          <li class="list-group-item">Calcio (Ca)
+          </li>
+        </ul>
+      </div>
+      <div class="card card-primary" style="width: 18rem;">
+          <div class="card-block card-inverse">
+            <h4 class="card-title text-center">Perfil lipídico
+            </h4>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Colesterol (COL)
+            </li>
+            <li class="list-group-item">Triglicéridos (TRIG)
+            </li>
+            <li class="list-group-item">HDL (lipoproteínas de alta densidad)
+            </li>
+            <li class="list-group-item">LDL (lipoproteínas de baja densidad)
+            </li>
+          </ul>
+        </div>
+<div class="card card-primary " style="width: 18rem;">
+    <div class="card-block card-inverse">
+      <h4 class="card-title text-center">Perfil cardíaco
+        </h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">CPK (Creatina quinasa)
+    </li>
+    <li class="list-group-item">AST (aspartato aminotransferasa, SGOT, GOT)
+    </li>
+    <li class="list-group-item">LDH (deshidrogenasa láctica)
+    </li>
+    <li class="list-group-item">CKMB (Creatina quinasa MB)
+      </li>
+      <li class="list-group-item">%CKMB 
+        </li>
+  </ul>
+</div>
+
+<div class="card card-primary" style="width: 18rem;">
+    <div class="card-block card-inverse">
+      <h4 class="card-title text-center">Electrolitos</h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cloro (Cl)
+      </li>
+      <li class="list-group-item">Dióxido de carbono (Bicarbonato, HCO3, CO2)
+      </li>
+      <li class="list-group-item">Potasio (K+)
+      </li>
+      <li class="list-group-item">Sodio (Na)
+      </li>
+      <li class="list-group-item">AGAP
+      </li>
+    </ul>
+  </div>
+<div class="card card-primary " style="width: 18rem;">
+    <div class="card-block card-inverse">
+      <h4 class="card-title text-center">Curva de tolerancia a la glucosa (CT)
+        </h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Glucosa en ayunas
+    </li>
+    <li class="list-group-item">(Toma de solución de dextrosa de 75 gramos)
+    </li>
+    <li class="list-group-item">Glucosa 1 hora
+    </li>
+    <li class="list-group-item">Glucosa 2 horas
+      </li>
+  </ul>
+</div>
+<div class="card card-primary " style="width: 18rem;">
+    <div class="card-block card-inverse">
+      <h4 class="card-title text-center">LCR (Líquido cefalorraquídeo)
+      </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Proteínas en LCR
+      </li>
+      <li class="list-group-item">Glucosa en LCR
+      </li>
+    </ul>
+  </div>
+<div class="card card-primary" style="width: 18rem;">
+    <div class="card-block card-inverse">
+      <h4 class="card-title text-center">Glucosa 2 horas postprandial (2HPP)
+        </h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Glucosa (en ayuna y dos horas después de desayunar)
+    </li>
+  </ul>
+</div>
+
+<div class="col ">
+    <div class="card card-primary " style="width: 18rem;">
+      <div class="card-block card-inverse">
+        <h4 class="card-title text-center">Policlínica</h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Creatinina
+        </li>
+        <li class="list-group-item">Nitrógeno de urea
+        </li>
+        <li class="list-group-item">Ácido úrico
+        </li>
+        <li class="list-group-item">Colesterol
+        </li>
+        <li class="list-group-item">Triglicéridos
+        </li>
+        <li class="list-group-item">HDL
+        </li>
+        <li class="list-group-item">LDL
+        </li>
+        <li class="list-group-item">Glucosa
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card card-primary " style="width: 18rem;">
+      <div class="card-block card-inverse">
+        <h4 class="card-title text-center">Perfil cardíaco
+        </h4>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">CPK (Creatina quinasa)
+          Cretinina (CREA, CR)
+        </li>
+        <li class="list-group-item">AST (aspartato aminotransferasa, SGOT, GOT)
+        </li>
+        <li class="list-group-item">LDH (deshidrogenasa láctica)
+        </li>
+        <li class="list-group-item">CKMB (Creatina quinasa MB)
+        </li>
+        <li class="list-group-item">%CKMB 
+  
+        </li>
+      </ul>
+    </div>
+
+    <div class="card card-primary" style="width: 18rem;">
+        <div class="card-block card-inverse">
+          <h4 class="card-title text-center">Perfil hepático
+          </h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Bilirrubina total (BT)
+          </li>
+          <li class="list-group-item">Bilirrubina directa (BD)
+          </li>
+          <li class="list-group-item">Bilirrubina indirecta (BI)
+          </li>
+          <li class="list-group-item">Proteína total (TP)
+          </li>
+          <li class="list-group-item">Albumina (ALB)
+          </li>
+          <li class="list-group-item">AST
+          </li>
+          <li class="list-group-item">ALT
+          </li>
+          <li class="list-group-item">Fosfatasa alcalina (ALK, FALC)
+          </li>
+          <li class="list-group-item">GGT (Gama glutamil transferasa)
+          </li>
+          <li class="list-group-item">LDH
+          </li>
+        </ul>
+      </div>
+
+      <div class="card card-primary" style="width: 18rem;">
+          <div class="card-block card-inverse">
+            <h4 class="card-title text-center">Perfil de Hemodiálisis
+            </h4>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Creatinina
+            </li>
+            <li class="list-group-item">Nitrógeno de urea
+            </li>
+            <li class="list-group-item">Ácido úrico
+            </li>
+            <li class="list-group-item">Fosforo
+            </li>
+            <li class="list-group-item">Calcio
+            </li>
+            <li class="list-group-item">Bilirrubina total
+            </li>
+            <li class="list-group-item">Proteína total
+            </li>
+            <li class="list-group-item">Albumina
+            </li>
+            <li class="list-group-item">Globulina
+            </li>
+            <li class="list-group-item">Colesterol
+            </li>
+            <li class="list-group-item">Triglicéridos
+            </li>
+            <li class="list-group-item">AST
+            </li>
+            <li class="list-group-item">ALT
+            </li>
+            <li class="list-group-item">Fosfatasa alcalina
+            </li>
+            <li class="list-group-item">GGT
+            </li>
+            <li class="list-group-item">LDH
+            </li>
+            <li class="list-group-item">Glucosa
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
+</div>

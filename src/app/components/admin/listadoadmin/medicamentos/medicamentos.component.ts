@@ -54,11 +54,7 @@ eliminarMedicamento(id) {
   onCancelMedicamento(){
    // this.confirmado = null;
   }
-  onDeleteMedicamento(id){
-   /* this._MedicamentosService.deleteMedicamento(this.token, id).subscribe(
-
-    ) */
-  }
+ 
 
   ngOnInit() {
 

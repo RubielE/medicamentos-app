@@ -24,8 +24,8 @@
           <input [(ngModel)]="microbiologia.disponibilidad" name="disponibilidad" #disponibilidad="ngModel" class="form-control" id="disponibilidad"/>
         </div>
         <div class="form-group col-4">
-          <label for="disponibilidad">Observación</label>
-          <input [(ngModel)]="urinalisis.observacion" name="observacion" #observacion="ngModel" class="form-control" id="observacion"/>
+          <label for="observacion">Observación</label>
+          <input [(ngModel)]="microbiologia.observacion" name="observacion" #observacion="ngModel" class="form-control" id="observacion"/>
         </div>
         <div class="form-group col-4">
           <label for="fecha" class="col-2 col-form-label">Fecha</label>
@@ -50,7 +50,7 @@
         </div>
         <div class="col-2">
           <div>
-            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+            <button [routerLink]="['/microbiologia-listadoadmin']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
               <strong> Ir a lista microbiología..</strong>
             </button>
           </div>

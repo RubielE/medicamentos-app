@@ -1,35 +1,28 @@
 <router-outlet></router-outlet>
-<div class="container">
+
+<div class="container col-10 title">
   <div class="row">
-      <div class="col col-md-12 card card-inverse card-primary text-center">
-        <blockquote class="card-blockquote">
-          <h2>Crear nuevo medicamento </h2>
-        </blockquote>
-    </div>
-  </div><br>
-
-
+      <div class="col col-10 card offset-1 card-inverse card-primary text-center">
+          <blockquote class="card-blockquote">
+            <h2>Creando nuevo medicamento </h2>
+          </blockquote>
+      </div>
+  </div><br/>
 
   <form (ngSubmit)="guardar()" #forma="ngForm">
+  
     <div class="form-group row">
       <label for="fecha" class="col-2 col-form-label">Fecha</label>
-      <div class="col-8">
+      <div class="col-10">
         <input [(ngModel)]="medicamentos.fecha" #fecha="ngModel"  name="fecha" class="form-control" type="date"
           value="fecha" id="fecha">
-      </div>
-      <div class="col-2">
-        <span
-              [routerLink]="['/medicamento/nuevo', medicamento._id]"
-              class="btn btn-primary btn-md">
-              Agregar nuevo
-        </span>
-    </div>
-    </div>
-    <div class="form-group">
-      <label for="nombre">Seleccione medicamento</label>
+      </div> 
+    </div><br/>
+    <div class="form-group row">
+      <label for="nombre" class="col-2">Seleccione medicamento</label>
 
-
-      <select [(ngModel)]="medicamentos.medicamento" value="medicamento" name="medicamento" #medicamento="ngModel" class="form-control" id="medicamento">
+    <div class="col-10">
+      <select [(ngModel)]="medicamentos.medicamento" value="medicamento" name="medicamento" #medicamento="ngModel" class="form-control col" id="medicamento">
 
         <option value="Acetato Aluminio Ác.(acetato Ca y sulfato Al), polvo 2 - 3 g">Acetato Aluminio Ác.(acetato Ca y sulfato Al), polvo 2 - 3 g</option>
         <option value="Acetato de Aluminio ácido, 0.050%- 0.060%, crema">Acetato de Aluminio ácido, 0.050%- 0.060%, crema</option>
@@ -339,7 +332,7 @@
 
       </select>
     </div>
-    <br><br>
+    </div>
 
     <!--seleccionar instalacion-->
 
@@ -348,10 +341,10 @@
         <div class="form-group ">
           <label for="CHAAM">Complejo H.A.A.M</label>
           <select [(ngModel)]="medicamentos.CHAAM" name="CHAAM" #CHAAM="ngModel" class="form-control" id="CHAAM">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            <option value="FCB">FCB</option>
+            <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
@@ -359,10 +352,10 @@
         <div class="form-group ">
           <label for="JJV">J.J. Vallarino</label>
           <select [(ngModel)]="medicamentos.JJV" name="JJV" #JJV="ngModel" class="form-control" id="JJV">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
@@ -370,33 +363,33 @@
         <div class="form-group ">
           <label for="ADGH">A.D.G.H Bethania</label>
           <select [(ngModel)]="medicamentos.ADGH" name="ADGH" #ADGH="ngModel" class="form-control" id="ADGH">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
-      <div class="w-100"></div>
       <div class="col">
-        <div class="form-group ">
-          <label for="MFV">Manuel F.Valdés</label>
-          <select [(ngModel)]="medicamentos.MFV" name="MFV" #MFV="ngModel" class="form-control" id="MFV">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
-          </select>
+          <div class="form-group ">
+            <label for="MFV">Manuel F.Valdés</label>
+            <select [(ngModel)]="medicamentos.MFV" name="MFV" #MFV="ngModel" class="form-control" id="MFV">
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+                <option value="FCB">FCB</option>
+                <option value="No disp.">No disp.</option>
+            </select>
+          </div>
         </div>
-      </div>
+      <div class="w-100"></div>
       <div class="col">
         <div class="form-group ">
           <label for="GG">G.G. Santa Librada</label>
           <select [(ngModel)]="medicamentos.GG" name="GG" #GG="ngModel" class="form-control" id="GG">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
@@ -404,65 +397,63 @@
         <div class="form-group ">
           <label for="MMV">M.María Valdés</label>
           <select [(ngModel)]="medicamentos.MMV" name="MMV" #MMV="ngModel" class="form-control" id="MMV">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
-      <div class="w-100"></div>
-      <div class="col-4">
+      <div class="col">
         <div class="form-group ">
           <label for="PPR">P. Presidente Remón</label>
           <select [(ngModel)]="medicamentos.PPR" name="PPR" #PPR="ngModel" class="form-control" id="PPR">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col">
         <div class="form-group ">
           <label for="CNB">C.N.B. San Francisco</label>
           <select [(ngModel)]="medicamentos.CNB" name="CNB" #CNB="ngModel" class="form-control" id="CNB">
-            <option value="Disponible">Disponible</option>
-            <option value="No disponible">No disponible</option>
-            <option value="F. cuadro básico">F. cuadro básico</option>
-            <option value="No se dispensa">No se dispensa</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+              <option value="FCB">FCB</option>
+              <option value="No disp.">No disp.</option>
           </select>
         </div>
       </div>
 
-    </div>
+    </div> <br/>
 
     <!-- TERMINA select de disponibilidad-->
 
-    <br>
-
     <div class="form-group">
       <div class="row">
-        <div class="col-10">
-          <label for="exampleTextarea">Detalle</label>
+          <label for="exampleTextarea" class="col-2">Detalle</label>
+          <div class="col-10">
           <textarea [(ngModel)]="medicamentos.detalle" name="detalle" #detalle="ngModel" class="form-control" id="detalle"
-            rows="3"></textarea>
+            rows="2"></textarea>
         </div>
+        <br/><br/><br/>
 
-        <div col="col-2 ">
-          <div>
-            <br>
+        <div class="btn-toolbar offset-8" role="toolbar" aria-label="toolbar with button groups">
+          <div class="btn-group mr-2 " role="group">
             <button [disabled]="!forma.valid"
                     type="submit"
                     class="btn btn-success btn-md justify-content-lg-end">
                     <strong>Guardar cambios</strong></button>
           </div>
-          <br>
-          <div>
-            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">&nbsp;
-              &nbsp; &nbsp;<strong> Ir a listado..</strong> &nbsp; &nbsp;</button>
+          <div class="btn-group mr-2" role="group">
+            <button [routerLink]="['/medicamentos']" type="submit" class="btn btn-danger btn-md justify-content-lg-end">
+              <strong> Ir a listado..</strong> 
+            </button>
           </div>
-        </div>
+        </div> 
+      
       </div>
     </div>
 

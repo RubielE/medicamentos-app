@@ -1,18 +1,13 @@
-
-
 .title{
     background: #0080FF;
-    padding: 10px;
+    margin-top: 1px;
+    margin-bottom: 1px;
     text-align: center;
     color: white;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+
 }
 
-.w {
-    margin-left: 5px;
-}
-
-.alt{
-    padding: 25px;
-    border-radius: 0px 0px 10px 10px;
-}
+.button {
+    padding: 5px 10px;
+    }

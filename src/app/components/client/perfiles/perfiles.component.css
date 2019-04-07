@@ -1,0 +1,105 @@
+
+.card{
+    margin-top: 15px;
+    margin-left:50px;
+}
+
+.body{
+    padding-bottom: 50px;
+}
+
+.title{
+    background: #0080FF;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+.button {
+    padding: 5px 10px;
+    }
+
+
+.title2{
+    background:#0080FF;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.title-body{
+    background: #0A5CD2 ;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    border-radius: 0px 0px 60px 60px;
+}
+
+
+.navigation{
+    margin:0px;
+    height: 100vh;
+    text-align: center;
+    background: #151515;
+}
+
+.head-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+}
+.head-title2{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    display: block;
+}
+
+.navigation a{
+    color:#ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    color: white;
+}
+
+.navigation .glyphicon{
+    font-size: 25px;
+    display: block;
+    width: 100%;
+}
+
+#user_logged{
+    background: #1c1c1f;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #444;
+    width: 75%;
+}
+
+div {
+    width: 100%;
+}
+.logo{
+    width: 150px;
+    height: auto;
+    margin: auto;
+    display: block;
+
+  }
+
+.others {
+    padding: 65px;
+}
+
